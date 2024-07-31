@@ -840,6 +840,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function updateBundleNames() {
+    bundleProducts.forEach((product, index) => {
+        if (index < 4) {
+            const bundleNameElement = document.getElementById(`bundle-name-${index + 1}`);
+            if (bundleNameElement) {
+                bundleNameElement.textContent = product.title;
+            }
+        }
+    });
+}
+
+// Example usage: Call this function whenever the bundleProducts array is updated
+document.addEventListener('DOMContentLoaded', function() {
+    // Assuming shopNowBtn is your button that adds products to the bundle
+    const shopNowBtn = document.getElementById('shop-now-btn');
+    
+    shopNowBtn.addEventListener('click', () => {
+        // Adding a product to the bundleProducts array as an example
+        const newProduct = {
+            title: 'New Product Title',
+            mainImage: 'path/to/image.jpg',
+            price: 1000,
+            selectedVariantId: 'variant-id'
+        };
+
+        if (bundleProducts.length < 4) {
+            bundleProducts.push(newProduct);
+            updateBundleNames(); // Call the function to update bundle names
+        } else {
+            alert("You already have 4 items in your bundle");
+        }
+    });
+});
+
+
 
 </script>
 
