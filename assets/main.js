@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Define the bundleBg and bundleContainer
 
-    const bundleBg = document.querySelector(".bundle-bg");
+    const bundleBg = document.querySelector("#bundle-bg");
     const bundleContainer = document.querySelector(".bundle-container");
     
     // Check if bundleBg and bundleContainer exist
