@@ -843,23 +843,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function updateBundleNames() {
-    // Clear existing bundle names
-    for (let i = 1; i <= 4; i++) {
-        document.getElementById(`bundle-name-${i}`).textContent = '';
-    }
-
-    // Update bundle names
-    bundleProducts.forEach((product, index) => {
-        if (index < 4) {
-            const bundleNameElement = document.getElementById(`bundle-name-${index + 1}`);
-            if (bundleNameElement) {
-                bundleNameElement.textContent = product.title;
-            }
-        }
-    });
-}
-
 
 </script>
 
