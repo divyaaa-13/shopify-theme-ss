@@ -373,6 +373,8 @@
     .product-details{
         height: 260px;
         padding-left: 5px;
+        display: flex;
+        flex-direction: column;
     }
     .product-details h4{
         font-size: 10px;
