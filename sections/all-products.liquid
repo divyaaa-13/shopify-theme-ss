@@ -1,0 +1,391 @@
+{% comment %} {{ 'product-popup.css' |  asset_url |  stylesheet_tag}}  {% endcomment %}
+
+<div class="collection-div" style="background-color: {{ section.settings.background_color }};">
+
+<div class="theme-img">
+  {% if section.settings.theme_img %}
+    <img src="{{ section.settings.theme_img | img_url }}" alt="Theme Image">
+  {% endif %}
+</div>
+
+<div class="carousel-container">
+  <button class="product-list-left productlist-carousel-btn">&lt;</button> 
+  <button class="product-list-right productlist-carousel-btn">&gt;</button> 
+<div class="products-list">
+ 
+  {% for product in section.settings.collection_id.products %}
+    {% assign sizes = '' %}
+    {% assign variants = '' %}
+
+    {% for variant in product.variants %}
+      {% assign sizes = sizes | append: variant.title %}
+      {% assign variants = variants | append: variant.id %}
+      {% unless forloop.last %}
+        {% assign sizes = sizes | append: ',' %}
+        {% assign variants = variants | append: ',' %}
+      {% endunless %}
+    {% endfor %}
+
+
+
+    <div class="product" 
+    data-id="{{ product.id }}"
+    data-handle="{{ product.handle }}" 
+    data-title="{{ product.title }}" 
+    data-price="{{ product.price }}" 
+    data-compare-at-price="{{ product.compare_at_price }}"
+    data-main-image="{{ product.featured_image | img_url: 'original' }}"
+    data-images="{% for image in product.images %}{{ image.src | img_url: 'original' }}{% unless forloop.last %},{% endunless %}{% endfor %}"
+    data-sizes="{{ sizes }}"
+    data-variants="{{ variants }}"
+    data-product-review-images='{{ product.metafields.custom.review_images.value | json }}'
+    onclick="showPopup(this)">
+
+    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+
+    <div class="collection-product-details">
+
+    <div class="popup-ratings">
+     <i class="fa-solid fa-star rating-star"></i>
+     <i class="fa-solid fa-star rating-star"></i>
+     <i class="fa-solid fa-star rating-star"></i>
+     <i class="fa-solid fa-star rating-star"></i>
+     <i class="fa-solid fa-star rating-star"></i>
+     <p class="rating-text">4.8(121)</p>
+   </div>
+   
+
+
+ <h3 class="collection-product-title">{{ product.title }}</h3>
+ <h4 class="collection-product-type">{{ product.type }}</h4>
+ <div class="collection-product-price">
+ <p class="collection-price-normal">${{ product.price | divided_by: 100.0 | money }}</p>
+ <p class="collection-price-compare">${{ product.compare_at_price | divided_by: 100.0 | money }}</p>
+ 
+ </div>
+ </div>
+ 
+</div>
+
+  {% endfor %}
+
+
+</div>
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const productList = document.querySelector(".products-list");
+    const leftButton = document.querySelector(".product-list-left");
+    const rightButton = document.querySelector(".product-list-right");
+
+    rightButton.addEventListener("click", function() {
+        const productListWidth = productList.clientWidth;
+        productList.scrollBy({ left: productListWidth, behavior: 'smooth' });
+    });
+
+    leftButton.addEventListener("click", function() {
+        const productListWidth = productList.clientWidth;
+        productList.scrollBy({ left: -productListWidth, behavior: 'smooth' });
+    });
+});
+
+
+
+</script>
+
+<style>
+ .collection-div {
+    padding: 0px 195px;
+    height: 658px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.theme-img {
+    height: 97px;
+    width: 527px;
+}
+
+.theme-img img {
+    height: 97px;
+    width: 527px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.products-list {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.productlist-carousel-btn {
+    height: 50px;
+    width: 50px;
+    background-color: #383838;
+    color: #ffffff;
+    border: none;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    z-index: 2;
+}
+
+.product-list-left {
+    left: 0px;
+}
+
+.product-list-right {
+    right: 0px;
+}
+
+.product {
+    width: 282px;
+}
+
+.product img {
+    height: 295px;
+    width: 282px;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.collection-product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.popup-ratings {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.rating-text {
+    margin: 0;
+}
+
+.rating-star {
+    font-size: 1rem;
+    color: #ffa500;
+    margin: 0;
+}
+
+.collection-product-title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.collection-product-type {
+    font-size: 1.2rem;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+.collection-product-price {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.collection-price-normal {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.collection-price-compare {
+    font-size: 2rem;
+    color: #858585;
+    text-decoration: line-through;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+    .collection-div {
+        padding: 30px 0px 30px 20px;
+        height: auto;
+        display: block;
+    }
+    .theme-img,
+    .theme-img img {
+        height: 160px;
+        width: 280px;
+    }
+    .carousel-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .products-list {
+        width: 100%;
+        gap: 10px;
+    }
+    .product {
+        width: 150px !important;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    .product img {
+        width: 150px;
+        height: 164px;
+    }
+    .collection-product-details {
+        gap: 0px;
+    }
+    .popup-ratings {
+        justify-content: center;
+    }
+    .rating-star {
+        font-size: 0.7rem;
+    }
+    .collection-product-title {
+        font-size: 1.5rem;
+    }
+    .collection-product-type {
+        font-size: 1rem;
+    }
+    .collection-product-price {
+        justify-content: center;
+    }
+    .collection-price-normal,
+    .collection-price-compare {
+        font-size: 1.2rem;
+    }
+    .productlist-carousel-btn {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+        top: 50%;
+    }
+}
+
+@media(min-width : 481px) and (max-width : 700px){
+  .collection-div {
+        padding: 30px 0px 30px 20px;
+        height: auto;
+        display: block;
+    }
+    /* .theme-img,
+    .theme-img img {
+        height: 160px;
+        width: 280px;
+    } */
+    .carousel-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .products-list {
+        width: 100%;
+        gap: 10px;
+    }
+    .product {
+        width: 150px !important;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    .product img {
+        width: 150px;
+        height: 164px;
+    }
+    .collection-product-details {
+        gap: 0px;
+    }
+    .popup-ratings {
+        justify-content: center;
+    }
+    .rating-star {
+        font-size: 0.7rem;
+    }
+    .collection-product-title {
+        font-size: 1.5rem;
+    }
+    .collection-product-type {
+        font-size: 1rem;
+    }
+    .collection-product-price {
+        justify-content: center;
+    }
+    .collection-price-normal,
+    .collection-price-compare {
+        font-size: 1.2rem;
+    }
+    .productlist-carousel-btn {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+        top: 50%;
+    }
+}
+
+@media(min-width :701px) and (max-width : 1200px){
+  .collection-div {
+    padding: 29px 60px;
+    height: auto;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+}
+
+
+  
+
+
+</style>
+
+<script src="{{ 'main.js' | asset_url }}"></script>
+
+{% schema %}
+  {
+  "name": "all-products",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "theme_img",
+      "label": "Theme Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "collection",
+       "id" : "collection_id",
+       "label": "collection"
+    }
+  ],
+  "presets": [{
+    "name": "all-products"
+  }]
+}
+
+  {% endschema %}
+  
