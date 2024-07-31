@@ -214,14 +214,12 @@ let sizeCloseBtn = document.querySelector(".size-chart-close-btn");
 let sizePopup = document.querySelector(".size-popup");
 let productPopupBG = document.querySelector(".product-popup-bg");
 let popupCloseBtn = document.querySelector(".product-close-btn");
-// let bundleBg = document.querySelector("#bundle-bg");
-// let popupShopNow = document.querySelector("#shop-now-btn");
-// console.log(popupShopNow);
+let bundleBg = document.querySelector("#bundle-bg");
+let popupShopNow = document.querySelector("#shop-now-btn");
+console.log(popupShopNow);
 
 
-// popupShopNow.addEventListener("click", ()=>{
-//     bundleBg.style.display = "block";
-// })
+
 
 
 let productData = {
@@ -456,7 +454,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Define the bundleBg and bundleContainer
-
+document.addEventListener('DOMContentLoaded', function() {
     const bundleBackground = document.querySelector("#bundle-bg");
     const bundleContainer = document.querySelector(".bundle-container");
     
@@ -493,7 +491,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('shopNowButton not found in the DOM');
     }
-
+});
 
 
 
