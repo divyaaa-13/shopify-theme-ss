@@ -389,6 +389,7 @@
         "slide_NTcHjY",
         "slide_G9ra8n"
       ],
+      "disabled": true,
       "settings": {
         "spacing_top": 5,
         "spacing_bottom": 0,
@@ -400,6 +401,7 @@
     },
     "product_slider_ApYhMA": {
       "type": "product-slider",
+      "disabled": true,
       "settings": {
         "collection": "mystery-sale",
         "products_count": 11,
@@ -419,6 +421,7 @@
     },
     "product_slider_BKid9q": {
       "type": "product-slider",
+      "disabled": true,
       "settings": {
         "collection": "retro-mesh-shorts",
         "products_count": 20,
@@ -438,6 +441,7 @@
     },
     "product_slider_64RBdq": {
       "type": "product-slider",
+      "disabled": true,
       "settings": {
         "collection": "chapter-13",
         "products_count": 7,
@@ -457,6 +461,7 @@
     },
     "product_slider_ypjU6w": {
       "type": "product-slider",
+      "disabled": true,
       "settings": {
         "collection": "devil-fruit-mesh-shorts",
         "products_count": 20,
@@ -591,6 +596,7 @@
     },
     "2c4671ec-c9b8-4ee6-aaef-6f0e7ee32905": {
       "type": "product-slider",
+      "disabled": true,
       "settings": {
         "collection": "women-athletic-shorts",
         "products_count": 20,
@@ -610,6 +616,7 @@
     },
     "1700280223389d2755": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "spacing_top": 40,
         "spacing_bottom": 0,
@@ -709,6 +716,7 @@
         "template--16989717987561__767d6a70-ae5b-4957-8418-2b1c6eaabc76-collection-2",
         "template--16989717987561__767d6a70-ae5b-4957-8418-2b1c6eaabc76-collection-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Chapter List",
         "content": "",
@@ -780,6 +788,7 @@
         "template--16854860923113__236a13ae-25cb-427e-84d8-92ac8cb301b7-icon-2",
         "template--16854860923113__236a13ae-25cb-427e-84d8-92ac8cb301b7-icon-3"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "content": "",
@@ -821,6 +830,7 @@
       "block_order": [
         "card_RgYyDK"
       ],
+      "disabled": true,
       "settings": {
         "collection": "spring-sale",
         "products_count": 20,
@@ -904,7 +914,7 @@
       "type": "all-products",
       "settings": {
         "theme_img": "shopify:\/\/shop_images\/one-piece-laptop_96d6ad6e-25e4-4fca-ac6f-5fa35f55b313.png",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "collection_id": "all-products"
       }
     },
