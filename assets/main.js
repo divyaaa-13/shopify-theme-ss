@@ -209,8 +209,8 @@ popupCloseBtn.addEventListener("click", () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const shopNowButton = document.getElementById('shop-now-btn');
-    const bundleBg = document.getElementById('bundle-bg');
+    const popupShopNow = document.getElementById('shop-now-btn');
+    const bundleBackground = document.getElementById('bundle-bg');
 
     console.log('shopNowButton:', shopNowButton);
     console.log('bundleBg:', bundleBg);
