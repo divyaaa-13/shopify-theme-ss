@@ -191,17 +191,17 @@ function initializeCarousel() {
 
 
 
-// sizeBtn.addEventListener("click", () => {
-//     sizePopup.style.display = "block";
-// });
+sizeBtn.addEventListener("click", () => {
+    sizePopup.style.display = "block";
+});
 
-// sizeCloseBtn.addEventListener("click", () => {
-//     sizePopup.style.display = "none";
-// });
+sizeCloseBtn.addEventListener("click", () => {
+    sizePopup.style.display = "none";
+});
 
-// popupCloseBtn.addEventListener("click", () => {
-//     productPopupBG.style.display = "none";
-// });
+popupCloseBtn.addEventListener("click", () => {
+    productPopupBG.style.display = "none";
+});
 
 
 
