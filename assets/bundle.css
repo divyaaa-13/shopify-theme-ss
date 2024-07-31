@@ -285,6 +285,9 @@
     .tracker-heading3{
         padding-left: 48px;
     }
+    .bundle-tracker-level{
+        height: 10px;
+    }
 
     .bundle-tracker-path {
         height: 10px;
