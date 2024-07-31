@@ -272,9 +272,9 @@
     .popup-ratings{
         gap: 2px;
     }
-    .rating-star{
+    /* .rating-star{
         font-size: 10px;
-    }
+    } */
     .product-details h2{
         font-size: 21px;
     }
