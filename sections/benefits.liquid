@@ -1,0 +1,48 @@
+{{ 'benefits.css' | asset_url |  stylesheet_tag }}
+
+<div class="benefits-div">
+    <h2 class="benefits-title">BENEFITS</h2>
+    <p class="benefits-subhead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eaque ad</p>
+
+    <div class="benefits-container">
+        {% for block in section.blocks %}
+        <div class="benefits-box">
+            <img class="benefit-img" src="{{ block.settings.benefit_image | img_url: '300x300' }}" alt="Benefit Image">
+            <p class="benefit-text">{{ block.settings.benefit_text }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+ 
+
+{% schema %}
+    {
+        "name": "Benefits",
+        "settings": [],
+        "blocks": [
+            {
+                "type": "benefit",
+                "name": "Benefit Box",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "benefit_image",
+                        "label": "Benefit Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "benefit_text",
+                        "label": "Benefit Text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Benefits",
+                "category": "Custom"
+            }
+        ]
+    }
+    {% endschema %}
+    
