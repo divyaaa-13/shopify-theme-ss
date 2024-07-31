@@ -168,22 +168,7 @@
         background-color: #d9d9d9;
         z-index: 120;
     }
-    .size-chart-close-btn {
-        height: 42px;
-        width: 42px;
-        background-color: #000000;
-        color: #ffffff;
-        border: none;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        z-index: 130;
-        right: 34px;
-        top: -20px;
-      
-    }
+  
     .size-options {
         /* margin-top: -10px; */
         display: flex;
