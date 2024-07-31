@@ -430,10 +430,10 @@ popupCloseBtn.addEventListener("click", () => {
     // const bundleBg = document.getElementById('bundle-bg');
 
     console.log('shopNowButton:', popupShopNow);
-    console.log('bundleBg:', bundleBackground);
+    console.log('bundleBg:', bundleBg);
     console.log(bundleProducts);
 
-    if (popupShopNow && bundleBackground) {
+    if (popupShopNow && bundleBg) {
         popupShopNow.addEventListener('click', function() {
             console.log("button was clicked");
 
@@ -441,8 +441,8 @@ popupCloseBtn.addEventListener("click", () => {
                 // Automatically select the first size
                 selectSize(productData.sizes[0]);
             }
-            console.log(bundleBackground);
-            bundleBackground.style.display = 'flex';
+            console.log(bundleBg);
+            bundleBg.style.display = 'flex';
         });
     } else {
         console.error('shopNowButton or bundleBg not found in the DOM');
