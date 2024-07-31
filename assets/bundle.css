@@ -498,29 +498,29 @@
         top: 5px;
     }
     .bundle-price h6 {
-        font-size: 1rem;
+        font-size: 10px;
     }
     .bundle-price .normal {
-        font-size: 1rem;
+        font-size: 10px;
     }
     .bundle-price .striked {
-        font-size: 1rem
+        font-size: 10px
     }
     .bundle-price h4 {
-        font-size: 1rem;
+        font-size: 10px;
         padding: 0px 0px;
     }
 
     .bundle-cart-btn {
         width: 300px;
         height: 50px;
-        padding: 1rem 0rem;
-        border-radius: 4rem;
-        font-size: 1.5rem;
+        padding: 10px 0px;
+        border-radius: 40px;
+        font-size: 15px;
         font-weight: bolder;
     }
     .bundle-baseline {
-        font-size: 1.3rem;
+        font-size: 13px;
         gap: 10px;
         margin-top: -10px;
     }
@@ -544,16 +544,16 @@
         margin: 20px;
         margin-left: 10px;
         padding: 10px 20px;
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
     .bundle-heading h3 {
-        font-size: 2rem;
+        font-size: 20px;
         font-weight: bolder;
         margin: 0;
     }
     .bundle-heading p {
-        font-size: 2rem;
+        font-size: 20px;
         margin: 0;
         color: #000000;
     }
@@ -566,7 +566,7 @@
 
     }
     .bundle-tracker-headings p {
-        font-size: 1.5rem;
+        font-size: 15px;
         margin: 5px ;
         padding-bottom: 10px;
     }
@@ -582,7 +582,7 @@
 
     .bundle-tracker-path {
         height: 20px;
-        font-size: 0.3rem;
+        font-size: 3px;
         width: 500px;
         display: flex;
         align-items: center;
@@ -592,8 +592,8 @@
         height: 30px;
         width: fit-content;
         padding: 5px 10px;
-        border-radius: 2rem;
-        font-size: 1.5rem;
+        border-radius: 20px;
+        font-size: 15px;
     }
     #buy-1 {
         left: -5px;
@@ -630,29 +630,29 @@
         top: 10px;
     }
     .bundle-price h6 {
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .bundle-price .normal {
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .bundle-price .striked {
-        font-size: 1.5rem
+        font-size: 15px;
     }
     .bundle-price h4 {
-        font-size: 1.5rem;
+        font-size: 15px;
         padding: 0px 0px;
     }
 
     .bundle-cart-btn {
         width: 300px;
         height: 50px;
-        padding: 1rem 0rem;
-        border-radius: 4rem;
-        font-size: 1.5rem;
+        padding: 10px 0px;
+        border-radius: 40px;
+        font-size: 15px;
         font-weight: bolder;
     }
     .bundle-baseline {
-        font-size: 1.3rem;
+        font-size: 13px;
         gap: 10px;
         margin-top: -10px;
     }
