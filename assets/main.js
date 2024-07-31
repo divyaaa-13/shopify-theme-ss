@@ -4,6 +4,10 @@ let sizePop = document.querySelector(".size-popup");
 let productPopupBG = document.querySelector(".product-popup-bg");
 let popupCloseBtn = document.querySelector(".product-close-btn");
 
+size.addEventListener("click", () => {
+    sizePop.style.display = "block";
+});
+
 
 let productData = {
     id: null,
@@ -191,12 +195,10 @@ function initializeCarousel() {
 
 
 
-size.addEventListener("click", () => {
-    sizePop.style.display = "block";
-});
+
 
 sizeCloseBtn.addEventListener("click", () => {
-    sizePopup.style.display = "none";
+    sizePop.style.display = "none";
 });
 
 popupCloseBtn.addEventListener("click", () => {
