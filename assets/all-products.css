@@ -42,13 +42,13 @@
     z-index: 2;
 }
 
-.product-list-left {
+/* .product-list-left {
     left: 0px;
 }
 
 .product-list-right {
     right: 0px;
-}
+} */
 
 .product {
     width: 282px;
@@ -89,7 +89,7 @@
 
 .collection-product-title {
     margin: 0;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bolder;
 }
 
