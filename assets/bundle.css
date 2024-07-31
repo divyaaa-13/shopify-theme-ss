@@ -255,7 +255,7 @@
         border-top-right-radius: 20px;
     }
     .bundle-heading{
-        gap: 0px;
+        gap: 2px;
     }
     .bundle-heading h3 {
         font-size: 12px;
