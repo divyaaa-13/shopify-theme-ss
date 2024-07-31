@@ -135,11 +135,11 @@
         gap: 10px;
     }
     .popup-product-price .normal {
-        font-size: 20px;
+        font-size: 19px;
         font-weight: bold;
     }
     .popup-product-price .striked {
-        font-size: 20px;
+        font-size: 19px;
         color: #858585;
         text-decoration: line-through;
         font-weight: bold;
