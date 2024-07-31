@@ -459,11 +459,11 @@ popupCloseBtn.addEventListener("click", () => {
 //     const bundleContainer = document.querySelector(".bundle-container");
     
     // Check if bundleBg and bundleContainer exist
-    if (bundleBackground) {
+    if (bundleBg) {
         bundleBackground.addEventListener("click", () => {
             // Hide bundleBg when clicking outside of bundleContainer
             if (!bundleContainer.contains(event.target)) {
-                bundleBackground.style.display = "none";
+                bundleBg.style.display = "none";
             }
         });
     } else {
@@ -479,12 +479,12 @@ popupCloseBtn.addEventListener("click", () => {
         console.error('bundleContainer not found in the DOM');
     }
 
-    const popupShopNow = document.getElementById('shop-now-btn');
+    // const popupShopNow = document.getElementById('shop-now-btn');
     if (popupShopNow) {
         popupShopNow.addEventListener('click', function() {
             console.log("button was clicked");
-            if (bundleBackground) {
-                bundleBackground.style.display = 'flex'; 
+            if (bundleBg) {
+                bundleBg.style.display = 'flex'; 
                 productPopupBG.style.display = "none";
             }
         });
