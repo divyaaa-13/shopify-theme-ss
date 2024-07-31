@@ -127,8 +127,8 @@
     .product-details p {
         font-size: 14px;
         color: #000000;
-        padding: 0;
-        margin: 0;
+        /* padding: 0;
+        margin: 0; */
     }
     .popup-product-price {
         display: flex;
@@ -148,8 +148,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 0;
-        margin-top: -15px;
+        /* padding-bottom: 0;
+        margin-top: -15px; */
     }
     .choose-size p {
         font-size: 13px;
