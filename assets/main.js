@@ -1,4 +1,4 @@
-let sizeBtn = document.querySelector("#size-btn");
+// let sizeBtn = document.querySelector("#size-btn");
 // let sizeCloseBtn = document.querySelector(".size-chart-close-btn");
 // let sizePopup = document.querySelector(".size-popup");
 let productPopupBG = document.querySelector(".product-popup-bg");
@@ -191,17 +191,17 @@ function initializeCarousel() {
 
 
 
-sizeBtn.addEventListener("click", () => {
-    sizePopup.style.display = "block";
-});
+// sizeBtn.addEventListener("click", () => {
+//     sizePopup.style.display = "block";
+// });
 
-sizeCloseBtn.addEventListener("click", () => {
-    sizePopup.style.display = "none";
-});
+// sizeCloseBtn.addEventListener("click", () => {
+//     sizePopup.style.display = "none";
+// });
 
-popupCloseBtn.addEventListener("click", () => {
-    productPopupBG.style.display = "none";
-});
+// popupCloseBtn.addEventListener("click", () => {
+//     productPopupBG.style.display = "none";
+// });
 
 
 
