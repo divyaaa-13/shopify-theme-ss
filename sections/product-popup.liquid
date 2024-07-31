@@ -156,13 +156,42 @@
     productPopUpBG.style.display = "none";
   })
 
-  let popupShopNow =  document.querySelector("#shop-now-btn");
-  let bundleBackground = document.querySelector("#bundle-bg");
+  // RENDERING THE BUNDLE...
 
-  popupShopNow.addEventListener("click", ()=>{
-    console.log("shop now btn was clicked");
-    bundleBackground.style.display = "block";
-  })
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const shopNowButton = document.getElementById('shop-now-btn');
+    const bundleBg = document.getElementById('bundle-bg');
+
+    console.log('shopNowButton:', shopNowButton);
+    console.log('bundleBg:', bundleBg);
+    console.log(bundleProducts);
+
+    if (shopNowButton && bundleBg) {
+        shopNowButton.addEventListener('click', function() {
+            console.log("button was clicked");
+
+            if (!productData.selectedSize && productData.sizes.length > 0) {
+                // Automatically select the first size
+                selectSize(productData.sizes[0]);
+            }
+            console.log(bundleBg);
+            bundleBg.style.display = 'flex';
+        });
+    } else {
+        console.error('shopNowButton or bundleBg not found in the DOM');
+    }
+  
+});
+
+
+  // let popupShopNow =  document.querySelector("#shop-now-btn");
+  // let bundleBackground = document.querySelector("#bundle-bg");
+
+  // popupShopNow.addEventListener("click", ()=>{
+  //   console.log("shop now btn was clicked");
+  //   bundleBackground.style.display = "block";
+  // })
 
  </script>   
 
