@@ -238,15 +238,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Define the bundleBg and bundleContainer
 document.addEventListener('DOMContentLoaded', function() {
-    const bundleBg = document.querySelector("#bundle-bg");
+    const bundleBackground = document.querySelector("#bundle-bg");
     const bundleContainer = document.querySelector(".bundle-container");
     
     // Check if bundleBg and bundleContainer exist
-    if (bundleBg) {
-        bundleBg.addEventListener("click", () => {
+    if (bundleBackground) {
+        bundleBackground.addEventListener("click", () => {
             // Hide bundleBg when clicking outside of bundleContainer
             if (!bundleContainer.contains(event.target)) {
-                bundleBg.style.display = "none";
+                bundleBackground.style.display = "none";
             }
         });
     } else {
