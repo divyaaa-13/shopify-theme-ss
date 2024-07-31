@@ -166,6 +166,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 .bundle-product-name{
     font-size: 8px;
