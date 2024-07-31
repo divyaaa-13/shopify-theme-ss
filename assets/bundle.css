@@ -254,6 +254,9 @@
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
+    .bundle-heading{
+        gap: 0px;
+    }
     .bundle-heading h3 {
         font-size: 12px;
         font-weight: bolder;
