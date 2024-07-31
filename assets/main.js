@@ -1,5 +1,5 @@
 let sizeBtn = document.querySelector("#size-btn");
-let sizepopUpCloseBtn = document.querySelector(".size-chart-close-btn");
+let sizePopUpCloseBtn = document.querySelector(".size-chart-close-btn");
 let sizePop = document.querySelector(".size-popup");
 let productPopupBG = document.querySelector(".product-popup-bg");
 let popupCloseBtn = document.querySelector(".product-close-btn");
