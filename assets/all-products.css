@@ -90,7 +90,7 @@
 
 .collection-product-title {
     margin: 0;
-    font-size: 16px;
+    font-size: 21pxpx;
     font-weight: bolder;
 }
 
@@ -118,7 +118,7 @@
 
 .collection-price-compare {
     font-size: 16px;
-    
+
     color: #858585;
     text-decoration: line-through;
     font-weight: bold;
