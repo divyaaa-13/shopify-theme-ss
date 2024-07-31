@@ -191,19 +191,20 @@ function initializeCarousel() {
 
 
 
-sizePopupBtn.addEventListener("click", () => {
-    console.log("size btn was clicked");
-    sizePop.style.display = "block";
-});
+document.addEventListener('DOMContentLoaded', () => {
+    sizePopupBtn.addEventListener("click", () => {
+        console.log("size btn was clicked");
+        sizePop.style.display = "block";
+    });
 
-sizePopUpCloseBtn.addEventListener("click", () => {
-    sizePop.style.display = "none";
-});
+    sizePopUpCloseBtn.addEventListener("click", () => {
+        sizePop.style.display = "none";
+    });
 
-popupCloseBtn.addEventListener("click", () => {
-    productPopupBG.style.display = "none";
+    popupCloseBtn.addEventListener("click", () => {
+        productPopupBG.style.display = "none";
+    });
 });
-
 
 
 
