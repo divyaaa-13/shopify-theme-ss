@@ -76,7 +76,7 @@
 
 
 .bundle-tracker{
-    font-size: 1px;
+    
     position: relative;
 }
 .bundle-tracker-path{
@@ -85,6 +85,9 @@
     display: flex;
     align-items: center;
     
+}
+.bundle-tracker-level{
+    font-size: 1px;
 }
 .bundle-tracker-points{
     height: 42px;
