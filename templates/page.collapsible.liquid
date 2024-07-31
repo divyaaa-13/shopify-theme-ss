@@ -1,0 +1,62 @@
+<!-- HTML and Liquid -->
+{% assign items = "Mesh Shorts,Board Shorts,Muay Thai Shorts,Joggers,Tank Tops,Women Athletic Shorts,Women Sports Bra,Women Leggings,Women Compression Shorts,Lever Belt,Pajamas,Basketball Jersey" | split: ',' %}
+{% assign images = "https://cdn.shopify.com/s/files/1/0574/5816/3893/files/1_35425af9-435b-4347-91f5-0197137ad480.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/2_c71b2074-5d8b-4f84-8236-30eb9555ce27.png?v=1719883830,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/3_95ef7470-64fc-4520-a5b6-5370edd6f662.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/4_f499ac07-b3f5-49c1-8bd7-02c5e4a33b17.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/5_a57e06c9-5351-4f6f-8754-332eeebcde03.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/6_b981135e-cb3b-493c-a1af-d4af7989c1f6.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/7_ee38a7bb-116c-4943-b32d-1cb4abd80f8d.png?v=1719883830,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/8_8665d34a-dd7f-4536-b9a5-c27648c0c537.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/9_c008e71b-d18e-4ec9-a099-34bb2488b36c.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/10_89eb397d-507f-474a-9b39-3082529c1ff3.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/11_d4db47ca-13e2-4cb3-9a2d-7ea0c1fff1e6.png?v=1719883829,https://cdn.shopify.com/s/files/1/0574/5816/3893/files/12_ddd782ed-17f0-47ba-a189-31d882d900a5.png?v=1719883829" | split: ',' %}
+{% for item in items %}
+  <div class="collapsible-row">
+    <div class="collapsible-header">
+      <h2>{{ item }}</h2>
+      <button type="button" class="toggle-button">+</button>
+    </div>
+    <div class="collapsible-content">
+      <p>Size Chart for {{ item }}.</p>
+      <img src="{{ images[forloop.index0] }}" alt="{{ item }}">
+    </div>
+  </div>
+{% endfor %}
+
+<!-- CSS -->
+<style>
+.collapsible-row {
+  border: 0px solid #ccc;
+  margin: 25px 0;
+  padding: 10px;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.collapsible-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.collapsible-content.active {
+  display: block;
+}
+
+.collapsible-content img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 10px;
+}
+</style>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const headers = document.querySelectorAll('.collapsible-header');
+  headers.forEach(header => {
+    header.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      content.classList.toggle('active');
+      
+      const button = this.querySelector('.toggle-button');
+      button.textContent = content.classList.contains('active') ? '-' : '+';
+    });
+  });
+});
+</script>

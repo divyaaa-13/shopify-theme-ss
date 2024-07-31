@@ -1,0 +1,362 @@
+<!-- snippets/template__product-item.liquid -->
+{% comment %} 
+  Product item that renders within Alpine template.
+
+  Usage:
+    {% render 'template__product-item' %}
+  
+  Globals:
+    - settings.enable_animations: boolean to enable animations
+    - settings.product_card_border_style: border style of thumbnails
+    - settings.product_card_color_border: border color
+    - settings.product_card_color_scheme: color scheme of thumbnails
+    - settings.product_card_ratio: set the aspect ratio of thumbnails
+    - settings.product_card_crop: set the image object sizing
+    - settings.product_card_title_font: typography for thumbnail titles
+    - settings.product_card_title_capitilization: set the capitilization for thumbnail titles
+    - settings.product_card_savings_badge: can be set to 'dollar', 'percent', or 'none'
+    - settings.product_card_stock_threshold: number to set the threshold for when to show stock count
+    - settings.product_card_enable_type: boolean to enable product type
+    - settings.product_card_enable_vendor: boolean to enable vendor
+    - settings.product_card_enable_count: boolean to enable variant count
+    - settings.enable_quick_desktop: boolean to enable quick add
+    - settings.enable_quick_mobile: boolean to enable quick add
+    - settings.type_seperator: setting to pick the type of seperator between text
+  
+  Recommendations:
+  - Must be used within a <template> tag with AlpineJS enabled
+{% endcomment %}
+
+<div class="group relative w-full
+  {% if settings.product_card_border_style == 'thumbnail' %}
+    border--radius overflow-hidden
+    {{ settings.product_card_color_border }} 
+    {{ settings.product_card_color_scheme }} 
+  {% endif %}"
+  x-data="{ 
+    button_loading: false
+  }">
+
+  {% comment %} Media {% endcomment %}
+  <a 
+    class="relative block mb-2 hover:opacity-100" 
+    :href="item.url"
+    aria-label="{% if product.featured_image.alt %}{{ product.featured_image.alt }}{% else %}{{ product.title }}{% endif %}">
+    <div 
+      class="
+        animation-500 w-full overflow-hidden
+        {{ settings.product_card_color_scheme }} 
+        {% if settings.product_card_border_style == 'image' %}
+          border--radius
+          {{ settings.product_card_color_border }} 
+        {% endif %}
+      ">
+      <div 
+        class="
+          object-cover overflow-hidden
+          {{ settings.product_card_ratio }} 
+        ">
+        {% if settings.product_card_crop == "cover" %}
+          {% capture image_class %}
+            w-full h-full object-cover {{ settings.product_card_color_scheme }}
+          {% endcapture %}
+        {% else %}
+          {% capture image_class %}
+            w-full h-full object-contain {{ settings.product_card_color_scheme }}
+          {% endcapture %}
+        {% endif %}
+        <picture>
+          <source 
+            media="(min-width: 768px)"
+            :srcset="item.featured_image + '&width=900'" 
+            />
+          <img 
+            class="{{ image_class }}"
+            width="600"
+            loading="lazy"
+            :src="item.featured_image + '&width=600'" 
+            :alt="item.title" 
+            />
+        </picture>
+      </div>
+    </div>
+  </a>
+
+  {% comment %} Quick add - desktop{% endcomment %}
+  {% if settings.enable_quick_desktop %}
+    <div 
+      class="absolute hidden w-full px-4 pb-4 -mt-16 translate-y-2 opacity-0 md:block group-hover:opacity-100 group-focus-within:opacity-100 animation-300 group-hover:translate-y-0 group-focus-within:translate-y-0"
+      x-show="item.available && !item.tags.includes('disable_quick_add')"
+      x-ref="formContainer">
+      <form 
+        class="flex flex-wrap" 
+        action="/cart/add" 
+        method="post" 
+        enctype="multipart/form-data"
+        x-data="{
+          current_variant_id: item.variants[0].id ,
+          current_variant_selling_plan_id: 0,
+          quantity: 1,
+        }"
+        @submit.prevent=" 
+          button_loading = true; 
+          addCartItem(current_variant_id, current_variant_selling_plan_id, quantity, true);
+          setTimeout(function(){ button_loading = false}, 500);
+        ">
+        <div 
+          class="!w-full" 
+          x-show="item.variants.length === 1">
+          <input 
+            name="id" 
+            type="hidden"
+            :value="current_variant_id"
+            x-model="current_variant_id">
+          <input 
+            class="!hidden"
+            name="quantity"
+            type="text" 
+            value="1" 
+            min="1" 
+            max="" 
+            x-model="quantity">
+          <button 
+            class="!w-full btn btn--secondary btn--small btn--load"
+            :class="{ 'btn--loading' : cart_loading && button_loading }"
+            type="submit" 
+            role="button" 
+            :disabled="button_loading">
+            <div class="btn__content">{{ 'products.general.add_to_cart' | t }}</div>
+            <div class="btn__spinner">
+              {% render 'component__icon', icon: 'spinner', size: '24', class: '' %}
+            </div>
+          </button>
+        </div>
+        <button 
+          class="!w-full btn btn--small btn--load btn--secondary" 
+          :class="{ 'btn--loading' : button_loading }"
+          type="button" 
+          :disabled="button_loading"
+          x-show="item.variants.length > 1" 
+          @click="
+            button_loading = true; 
+            fetchAndRenderQuickAdd(item.handle, 'recommendations');
+            setTimeout(function(){ button_loading = false}, 500);
+          ">
+            <div class="btn__content">{{ 'products.general.add_to_cart' | t }}</div>
+            <div class="btn__spinner">
+              {% render 'component__icon', icon: 'spinner', size: '24', class: '' %}
+            </div>
+          </button>
+      </form>
+    </div>
+  {% endif %}
+  <div 
+    class="absolute hidden w-full px-4 pb-4 -mt-16 translate-y-2 opacity-0 md:block group-hover:opacity-100 group-focus-within:opacity-100 animation-300 group-hover:translate-y-0 group-focus-within:translate-y-0"
+    x-show="!item.available" >
+    <button
+      class="!w-full btn btn--small btn--plain"
+      type="button"
+      tabindex="-1">
+      {{ 'products.general.sold_out' | t }}
+    </button>
+  </div>
+
+  {% comment %} Content {% endcomment %}
+  <a :href="item.url" tabindex="-1" 
+    class="
+      hover:no-underline flex flex-col items-start gap-0.5 no-underline whitespace-normal
+      {% if settings.product_card_alignment == "center" %}
+        text-center items-center
+      {% endif %}
+      {% if settings.product_card_alignment == "left" %}
+        text-left items-start
+      {% endif %}
+      {% if settings.product_card_alignment == "right" %}
+        text-right items-end
+      {% endif %}
+      {% if settings.product_card_border_style == "thumbnail" %}
+        px-4 py-4
+        {% if settings.enable_quick_mobile %}
+          pb-14 md:pb-4
+        {% endif %}
+      {% else %}
+        {% if settings.enable_quick_mobile %}
+          pb-14 md:pb-0
+        {% endif %}
+      {% endif %}
+    ">
+
+    {% comment %} Title {% endcomment %}
+    <h3 class="
+        type--base !leading-tight mb-0
+        {% unless settings.product_card_alignment == "justified" %}
+          w-full
+        {% endunless %}
+        {{ settings.product_card_title_capitilization }}
+        {{ settings.product_card_title_font }}
+      "
+      x-text="item.title">
+    </h3>
+
+    {% comment %} Details {% endcomment %}
+    {% if settings.product_card_enable_type or settings.product_card_enable_vendor or settings.product_card_enable_count %}
+      <ul class="flex flex-wrap items-center gap-x-1 gap-y-0.5 p-0 opacity-75
+        {% if settings.product_card_alignment == "center" %}
+          justify-center
+        {% endif %}
+        {% if settings.product_card_alignment == "right" or settings.product_card_alignment == "justified" %}
+          justify-end
+        {% endif %}
+        {% unless settings.product_card_alignment == "justified" %}
+          w-full
+        {% endunless %}">
+        {% if settings.product_card_enable_type %}
+          <li class="type--small inline-block last:after:hidden after:pl-1
+            {% if settings.type_seperator == 'dot' %} after:content-['\00B7'] {% else %} after:content-['\007C'] {% endif %}"
+            x-text="item.type">
+          </li>
+        {% endif %}
+        {% if settings.product_card_enable_vendor %}
+          <li class="type--small inline-block last:after:hidden after:pl-1
+            {% if settings.type_seperator == 'dot' %} after:content-['\00B7'] {% else %} after:content-['\007C'] {% endif %}"
+            x-text="item.vendor">
+          </li>
+        {% endif %}
+        {% if settings.product_card_enable_count %}
+          <li class="type--small inline-block last:after:hidden after:pl-1
+            {% if settings.type_seperator == 'dot' %} after:content-['\00B7'] {% else %} after:content-['\007C'] {% endif %}" 
+            x-text="item.variants.length + ' {{ 'products.general.options' | t }}'">
+          </li>
+        {% endif %}
+      </ul>
+    {% endif %}
+
+    {% comment %} Price {% endcomment %}
+    <div 
+      class="
+        flex flex-wrap items-center gap-1
+        {% if settings.product_card_alignment == "center" %}
+          justify-center
+        {% endif %}
+        {% if settings.product_card_alignment == "right" or settings.product_card_alignment == "justified" %}
+          justify-end
+        {% endif %}
+        {% unless settings.product_card_alignment == "justified" %}
+          w-full
+        {% endunless %}
+      ">
+      {% if settings.price_range_display == "show_range" %}
+        <span 
+          class="type--small" 
+          x-html="Shopify.formatMoney(item.price_min)">
+          {{ product.price_min | money }}
+        </span>
+        <span 
+          class="m-0 type--small"
+          x-show="item.price_varies"  
+          x-html="' - ' + Shopify.formatMoney(item.price_max)"> - {{ product.price_max | money }}
+        </span>
+      {% else %}
+        <span 
+          class="type--small"
+          x-show="item.price_varies"  
+          x-text="'{{ 'products.general.up_from' | t }}' + ' ' + Shopify.formatMoney(item.price_min)">
+          {{ 'products.general.up_from' | t }} {{ product.price_min | money }}
+        </span>
+        <span 
+          class="type--small"
+          x-show="!item.price_varies" 
+          x-html="Shopify.formatMoney(item.price_min)">
+          {{ 'products.general.up_from' | t }} {{ product.price_min | money }}
+        </span>
+      {% endif %}
+        <span 
+          class="type--small"
+          x-show="item.compare_at_price_max > 0">
+          <s 
+            x-html="Shopify.formatMoney(item.compare_at_price_max)">
+            {{ product.compare_at_price_max | money }}
+          </s>
+        </span>
+    </div>
+  </a>
+
+  {% comment %} Quick add - mobile {% endcomment %}
+  {% if settings.enable_quick_mobile %}
+    <div class="absolute bottom-0 w-full pt-4 no-js--hide md:hidden" 
+      x-show="item.available && !item.tags.includes('disable_quick_add')">
+      <form 
+        class="flex flex-wrap" 
+        action="/cart/add" 
+        method="post" 
+        enctype="multipart/form-data"
+        x-data="{
+          current_variant_id: item.variants[0].id ,
+          current_variant_selling_plan_id: 0,
+          quantity: 1,
+        }"
+        @submit.prevent=" 
+          button_loading = true; 
+          addCartItem(current_variant_id, current_variant_selling_plan_id, quantity, true);
+          setTimeout(function(){ button_loading = false}, 500);
+        ">
+        <div 
+          class="!w-full" 
+          x-show="item.variants.length === 1">
+          <input 
+            name="id" 
+            type="hidden"
+            :value="current_variant_id"
+            x-model="current_variant_id">
+          <input 
+            class="!hidden"
+            name="quantity"
+            type="text" 
+            value="1" 
+            min="1" 
+            max="" 
+            x-model="quantity">
+          <button 
+            class="!w-full btn btn--secondary btn--small btn--load"
+            :class="{ 'btn--loading' : cart_loading && button_loading }"
+            type="submit" 
+            role="button" 
+            :disabled="button_loading">
+            <div class="btn__content">{{ 'products.general.add_to_cart' | t }}</div>
+            <div class="btn__spinner">
+              {% render 'component__icon', icon: 'spinner', size: '24', class: '' %}
+            </div>
+          </button>
+        </div>
+        <button 
+          class="!w-full btn btn--small btn--load btn--secondary" 
+          :class="{ 'btn--loading' : button_loading }"
+          type="button" 
+          :disabled="button_loading"
+          x-show="item.variants.length > 1" 
+          @click="
+            button_loading = true; 
+            fetchAndRenderQuickAdd(item.handle, 'recommendations');
+            setTimeout(function(){ button_loading = false}, 500);
+          ">
+          <div class="btn__content">{{ 'products.general.add_to_cart' | t }}</div>
+          <div class="btn__spinner">
+            {% render 'component__icon', icon: 'spinner', size: '24', class: '' %}
+          </div>
+        </button>
+      </form>
+    </div>
+    <div class="absolute bottom-0 w-full pt-4 md:hidden"
+      x-show="!item.available">
+      <button
+        class="!w-full btn btn--small btn--plain"
+        type="button"
+        tabindex="-1">
+        {{ 'products.general.sold_out' | t }}
+      </button>
+    </div>
+  {% endif %}
+
+  <div :id="'js-quickAdd-recommendations-' + item.handle"></div>
+
+</div>

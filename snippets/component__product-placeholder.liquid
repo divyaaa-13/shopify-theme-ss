@@ -1,0 +1,120 @@
+<!-- snippets/component__product-placeholder.liquid -->
+{% comment %} 
+  Standard product thumbnail.
+  Accepts:
+    - product: liquid product object
+    - source: accessibility variable
+  
+  Usage:
+    {% render 'component__product-item', 
+      product: product, 
+      source: 'section-name' %}
+  Globals:
+    - settings.enable_animations: boolean to enable animations
+    - settings.product_card_border_style: border style of thumbnails
+    - settings.product_card_color_border: border color
+    - settings.product_card_color_scheme: color scheme of thumbnails
+    - settings.product_card_ratio: set the aspect ratio of thumbnails
+    - settings.product_card_crop: set the image object sizing
+    - settings.product_card_title_font: typography for thumbnail titles
+    - settings.product_card_title_capitilization: set the capitilization for thumbnail titles
+    - settings.product_card_savings_badge: can be set to 'dollar', 'percent', or 'none'
+    - settings.product_card_stock_threshold: number to set the threshold for when to show stock count
+    - settings.product_card_enable_type: boolean to enable product type
+    - settings.product_card_enable_vendor: boolean to enable vendor
+    - settings.product_card_enable_count: boolean to enable variant count
+    - settings.enable_quick_desktop: boolean to enable quick add
+    - settings.enable_quick_mobile: boolean to enable quick add
+    - settings.type_seperator: setting to pick the type of seperator between text
+  
+  Possible enhancements: 
+    - Add setting to disable video on hover, can cause performance issues. 
+  
+  Pro tips:
+    - Use this while looping through products. For example on collection product grids.
+{% endcomment %}
+
+<div class="group relative w-full
+  {% if settings.product_card_border_style == 'thumbnail' %}
+    border--radius overflow-hidden
+    {{ settings.product_card_color_border }} 
+    {{ settings.product_card_color_scheme }} 
+  {% endif %}">
+  
+  {% comment %} Image {% endcomment %}
+  <a href="#"
+    class="relative block mb-2">
+    <div class="w-full overflow-hidden
+      {{ settings.product_card_color_scheme }} 
+      {% if settings.product_card_border_style == 'image' %}
+        border--radius
+        {{ settings.product_card_color_border }} 
+      {% endif %}">
+      <div class="object-cover overflow-hidden flex
+        {{ settings.product_card_ratio }}">
+        {% if index > 6 %}
+          {{ 'collection-1' | placeholder_svg_tag }}
+        {% else %}
+          {{ 'collection-' | append: index | placeholder_svg_tag }}
+        {% endif %}
+      </div>
+    </div>
+  </a>
+
+  {% comment %} Content {% endcomment %}
+  <a 
+    class="
+      hover:no-underline flex flex-col items-start gap-0.5 no-underline whitespace-normal
+      {% if settings.product_card_alignment == "center" %}
+        text-center
+      {% endif %}
+      {% if settings.product_card_alignment == "right" %}
+        text-right
+      {% endif %}
+      {% if settings.product_card_border_style == "thumbnail" %}
+        px-4 py-4
+        {% if settings.enable_quick_mobile %}
+          pb-14 md:pb-4
+        {% endif %}
+      {% else %}
+        {% if settings.enable_quick_mobile %}
+          pb-14 md:pb-0
+        {% endif %}
+      {% endif %}
+    "
+    href="{{ url }}" 
+    tabindex="-1"
+    >
+
+    <h3 
+      class="
+        type--base !leading-tight mb-0
+        {% unless settings.product_card_alignment == "justified" %}
+          w-full
+        {% endunless %}
+        {{ settings.product_card_title_capitilization }}
+        {{ settings.product_card_title_font }}
+      ">
+      {{ 'products.general.item' | t }}
+    </h3>
+
+    <div 
+      class="
+        flex flex-wrap items-center gap-1
+        {% if settings.product_card_alignment == "center" %}
+          justify-center
+        {% endif %}
+        {% if settings.product_card_alignment == "right" or settings.product_card_alignment == "justified" %}
+          justify-end
+        {% endif %}
+        {% unless settings.product_card_alignment == "justified" %}
+          w-full
+        {% endunless %}
+      ">
+      <span 
+        class="type--small" 
+        x-html="Shopify.formatMoney(1000)">$10.00</span>
+    </div>
+  </a>
+  
+</div>

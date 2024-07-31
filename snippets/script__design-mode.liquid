@@ -1,0 +1,73 @@
+<!-- snippets/script__design-mode.liquid -->
+{% comment %}
+  Apply minor changes when using the theme editor for a better experience.
+
+  Usage:
+    {% render 'script__design-mode' %}
+{% endcomment %}
+
+{% if request.design_mode %}
+  <script>
+    document.addEventListener('shopify:section:select', function (event) {
+      if (event.detail.sectionId.includes('theme__menu')) {
+        const section = event.target.children[0];
+        const backdrop = section.children[0];
+        const drawer = section.children[1];
+
+        section.style.display = 'block';
+        backdrop.style.display = 'block';
+        drawer.style.display = 'flex';
+      }
+      if (event.detail.sectionId.includes('theme__cart')) {
+        const section = event.target.children[0];
+        const backdropAbs = section.children[0];
+        const backdrop = backdropAbs.children[0];
+        const drawer = backdropAbs.children[1];
+
+        section.style.display = 'block';
+        backdropAbs.style.display = 'block';
+        backdrop.style.display = 'block';
+        drawer.style.display = 'flex';
+      }
+    });
+    document.addEventListener('shopify:section:deselect', function (event) {
+      if (event.detail.sectionId.includes('theme__menu')) {
+        const section = event.target.children[0];
+        const backdrop = section.children[0];
+        const drawer = section.children[1];
+
+        section.style.display = 'none';
+        backdrop.style.display = 'none';
+        drawer.style.display = 'none';
+      }
+      if (event.detail.sectionId.includes('theme__cart')) {
+        const section = event.target.children[0];
+        const backdropAbs = section.children[0];
+        const backdrop = backdropAbs.children[0];
+        const drawer = backdropAbs.children[1];
+
+        section.style.display = 'none';
+        backdropAbs.style.display = 'none';
+        backdrop.style.display = 'none';
+        drawer.style.display = 'none';
+      }
+    });
+  </script>
+  
+  {% comment %} Subscribe to Loops {% endcomment %}
+  <script>
+    const merchantData = {
+      email: '{{ shop.email }}',
+      url: '{{ shop.url }}',
+      shop: '{{ shop.name }}',
+      theme: 'Paper v7.3.0'
+    };
+    fetch('https://brickspaceloops.vercel.app/api/updateContact', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json',},
+      body: JSON.stringify(merchantData),
+    })
+    .then(response => { return response.json(); })
+    .catch((error) => { console.error('Error:', error); });
+  </script>
+{% endif %}
