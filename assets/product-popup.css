@@ -150,10 +150,10 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: 0;
-        margin-top: -1.5rem;
+        margin-top: -15px;
     }
     .choose-size p {
-        font-size: 1.5rem;
+        font-size: 15px;
         font-weight: bolder;
     }
     .choose-size h4 {
@@ -249,7 +249,7 @@
         flex-direction: column;
         padding: 2rem;
         border-radius: 0.5rem;
-        gap: 1.5rem;
+        gap: 15px;
     }
     .product-close-btn {
         height: 3.8rem;
@@ -287,16 +287,16 @@
         font: 1.3rem;
     }
     .choose-size h4{
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .size-options div{
         height: 3rem;
         width: 5.8rem;
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .product-details .shop-now{
         padding: 1rem 1rem;
-        font-size: 1.5rem;
+        font-size: 15px;
     }
 }
 
@@ -309,7 +309,7 @@
         flex-direction: column;
         padding: 2rem;
         border-radius: 0.5rem;
-        gap: 1.5rem;
+        gap: 15px;
     }
     .product-close-btn {
         height: 3.8rem;
@@ -349,12 +349,12 @@
         font: 1.3rem;
     }
     .choose-size h4{
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .size-options div{
         height: 3rem;
         width: 5.8rem;
-        font-size: 1.5rem;
+        font-size: 15px;
     }
 
     .size.selected {
@@ -363,7 +363,7 @@
 }
     .product-details .shop-now{
         padding: 1rem 1rem;
-        font-size: 1.5rem;
+        font-size: 15px;
     }
 
 }
@@ -398,28 +398,28 @@
         font-size: 2rem;
     }
     .product-details p{
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .choose-size p{
         font: 1.3rem;
     }
     .choose-size h4{
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .size-options div{
         height: 3rem;
         width: 5.8rem;
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .product-details .shop-now{
         padding: 1rem 1rem;
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .popup-product-price .normal {
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .popup-product-price .striked {
-        font-size: 1.5rem;
+        font-size: 15px;
     }
     .review-images img {
         height: 80px;
