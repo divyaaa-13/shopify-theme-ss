@@ -165,17 +165,17 @@
         font-size: 7px;
     }
     .collection-product-title {
-        font-size: 15px;
+        font-size: 16px;
     }
     .collection-product-type {
-        font-size: 10px;
+        font-size: 12px;
     }
     .collection-product-price {
         justify-content: center;
     }
     .collection-price-normal,
     .collection-price-compare {
-        font-size: 12px;
+        font-size: 14px;
     }
     .productlist-carousel-btn {
         height: 40px;
