@@ -1,0 +1,285 @@
+<div class="celebrity-div">
+    <h2 class="celebrity-title">WORN BY CELEBRITIES</h2>
+    <div class="carousel-container">
+        <div class="celebrity-carousel">
+            {% for block in section.blocks %}
+                <div class="celebrity-box">
+                    <img src="{{ block.settings.image | img_url: '480x480' }}" alt="Celebrity Image">
+                    <div class="celeb-text">
+                        <h4 class="celeb-title">{{ block.settings.celeb_title }}</h4>
+                        <p class="celeb-text-content">{{ block.settings.celeb_text_content }}</p>
+                        <div class="celebrity-name-div">
+                            <h3 class="celeb-name">{{ block.settings.celeb_name }}</h3>
+                            <p>
+                                {% render 'icon-tick' %}
+                                Verified Customer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button prev-button">&lt;</button>
+            <button class="carousel-button next-button">&gt;</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<style>
+.celebrity-div {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 195px;
+    color: black;
+}
+
+.celebrity-title {
+    font-size: 5.5rem;
+    font-weight: bolder;
+}
+
+.carousel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Hides overflow content */
+}
+
+.celebrity-carousel {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth scrolling effect */
+    width: 100%;
+    will-change: transform; /* Optimizes the performance */
+}
+
+.celebrity-box {
+    height: 348px;
+    width: 550px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-right: 20px; /* Adds gap between boxes */
+}
+
+.celebrity-box img {
+    height: 348px;
+    width: 221px;
+    background-color: gray;
+    object-fit: cover; /* Ensures image covers its box */
+}
+
+.celeb-text {
+    height: auto;
+    width: 307px;
+    padding: 5px 10px; /* Added horizontal padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.celeb-text h4 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.celeb-text-content {
+    font-size: 2rem;
+    margin: 0;
+    color: #000000;
+    font-style: italic;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.celebrity-name-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.celebrity-name-div h3 {
+    font-size: 2.3rem;
+    font-weight: bolder;
+    color: #000000;
+    margin: 0;
+}
+
+.celebrity-name-div svg {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #414141;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.celebrity-name-div p {
+    font-size: 1.5rem;
+    color: #414141;
+    padding: 0;
+    margin: 0;
+    align-self: flex-end;
+    margin-top: -2px;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-button {
+    background-color: #000; /* Button color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@media (min-width: 319px) and (max-width: 480px) {
+    .celebrity-div {
+        padding: 20px 10px;
+    }
+    .celebrity-box {
+        width: 100%;
+        height: 243px;
+        max-width: none; /* Override max-width */
+    }
+    .celebrity-title{
+        font-size: 2rem;
+    }
+    .celebrity-box img{
+        height: 243px;
+        width: 116px;
+    }
+    .celeb-text{
+        width: 100%;
+    }
+    .celeb-text h4 {
+        font-size: 1.5rem;
+    }
+    .celeb-text-content{
+        font-size: 1rem;
+    }
+    .celebrity-name-div h3{
+        font-size: 1rem;
+    }
+    .celebrity-name-div p {
+        font-size: 0.8rem;
+    }
+    .celebrity-name-div {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .carousel-buttons {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+</style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.celebrity-carousel');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const items = document.querySelectorAll('.celebrity-box');
+    const itemWidth = items[0].offsetWidth + 20; // Including the gap/margin
+    let scrollAmount = 0;
+    let currentIndex = 0;
+
+    // Show buttons only if there are more than 1 items
+    if (items.length > 1) {
+        prevButton.style.display = 'block';
+        nextButton.style.display = 'block';
+    } else {
+        prevButton.style.display = 'none';
+        nextButton.style.display = 'none';
+    }
+
+    nextButton.addEventListener('click', () => {
+        if (scrollAmount < carousel.scrollWidth - carousel.clientWidth) {
+            scrollAmount += itemWidth;
+            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+            currentIndex = Math.min(currentIndex + 1, items.length - 1);
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (scrollAmount > 0) {
+            scrollAmount -= itemWidth;
+            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+            currentIndex = Math.max(currentIndex - 1, 0);
+        }
+    });
+});
+</script>
+
+{% schema %}
+    {
+        "name": "Celebrity Section",
+        "settings": [],
+        "blocks": [
+            {
+                "type": "celebrity_box",
+                "name": "Celebrity Box",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Celebrity Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "celeb_title",
+                        "label": "Celebrity Title",
+                        "default": "Lorem ipsum dolor sit amet consectetur"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "celeb_text_content",
+                        "label": "Celebrity Text Content",
+                        
+                    },
+                    {
+                        "type": "text",
+                        "id": "celeb_name",
+                        "label": "Celebrity Name",
+                        "default": "Name"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Default",
+                "category": "Custom"
+            }
+        ]
+    }
+    {% endschema %}
+    
