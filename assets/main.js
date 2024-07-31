@@ -212,20 +212,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupShopNow = document.getElementById('shop-now-btn');
     const bundleBackground = document.getElementById('bundle-bg');
 
-    console.log('shopNowButton:', shopNowButton);
-    console.log('bundleBg:', bundleBg);
+    console.log('shopNowButton:', popupShopNow);
+    console.log('bundleBg:', bundleBackground);
     console.log(bundleProducts);
 
-    if (shopNowButton && bundleBg) {
-        shopNowButton.addEventListener('click', function() {
+    if (popupShopNow && bundleBackground) {
+        popupShopNow.addEventListener('click', function() {
             console.log("button was clicked");
 
             if (!productData.selectedSize && productData.sizes.length > 0) {
                 // Automatically select the first size
                 selectSize(productData.sizes[0]);
             }
-            console.log(bundleBg);
-            bundleBg.style.display = 'flex';
+            console.log(bundleBackground);
+            bundleBackground.style.display = 'flex';
         });
     } else {
         console.error('shopNowButton or bundleBg not found in the DOM');
