@@ -411,7 +411,7 @@
     .product-details .shop-now{
         padding: 10px 10px;
         font-size: 15px;
-        margin: 0;
+        /* margin: 0; */
     }
     .popup-product-price .normal {
         font-size: 15px;
