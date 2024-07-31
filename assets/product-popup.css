@@ -183,11 +183,9 @@
         align-items: center;
         position: relative;
         z-index: 130;
-        /* right: 34px;
-        top: -20px; */
-        top: 0;
-        left: 0;
-        right: 0;
+        right: 34px;
+        top: -20px;
+      
     }
     .size-options {
         margin-top: -10px;
