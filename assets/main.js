@@ -196,7 +196,7 @@ sizeBtn.addEventListener("click", () => {
     sizePop.style.display = "block";
 });
 
-sizePopCloseBtn.addEventListener("click", () => {
+sizePopUpCloseBtn.addEventListener("click", () => {
     sizePop.style.display = "none";
 });
 
