@@ -16,11 +16,10 @@
 .bundle-container{
     height: 630px;
     width: 1369px;
-    padding: 20px 0px;
     color: #000000;
     background-color: #ffffff;
     margin: 20px;
-    padding: 30px 200px;
+    padding: 30px 20px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     box-shadow: -1px -0.1px 30px #afafaf;
