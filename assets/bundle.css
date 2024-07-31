@@ -6,7 +6,8 @@
     display: none;
     justify-content: center;
     align-items:flex-end;
-    background-color: rgba(255, 255, 255, 0.7);
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    background-color: aqua;
     top: 0;
     left: 0;
     right: 0;
