@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Define the bundleBg and bundleContainer
-
+document.addEventListener('DOMContentLoaded', function() {
     const bundleBg = document.querySelector("#bundle-bg");
     const bundleContainer = document.querySelector(".bundle-container");
     
@@ -274,6 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('shopNowButton not found in the DOM');
     }
+});
 
 
 
