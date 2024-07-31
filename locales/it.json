@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "general": {
@@ -269,7 +278,7 @@
       "phone_placeholder": "000-000-0000",
       "address": "Indirizzo",
       "address_placeholder": "123 Happy St",
-      "address_2": "Numero Apt/Suite",
+      "address_2": "Numero Apt\/Suite",
       "address_2_placeholder": "Unità 2",
       "city": "Città",
       "city_placeholder": "",
@@ -277,7 +286,7 @@
       "zip_placeholder": "",
       "country": "Paese",
       "country_placeholder": "",
-      "region": "Stato / provincia",
+      "region": "Stato \/ provincia",
       "region_placeholder": "",
       "default_address": "Imposta come indirizzo predefinito",
       "create_address": "Aggiungi nuovo indirizzo",
