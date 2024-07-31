@@ -87,6 +87,7 @@
     border-radius: 50%;
     position: absolute;
     top: 45%;
+    z-index: 110;
 }
 
 .product-img-left {
