@@ -5,6 +5,7 @@ let productPopupBG = document.querySelector(".product-popup-bg");
 let popupCloseBtn = document.querySelector(".product-close-btn");
 let bundleBg = document.querySelector("#bundle-bg");
 console.log(bundleBg);
+console.log(productPopupBG)
 
 
 let productData = {
