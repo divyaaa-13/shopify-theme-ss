@@ -1,0 +1,82 @@
+{{ 'bundle.css' |  asset_url |  stylesheet_tag}} 
+
+<div id="bundle-bg" class="bundle-bg">
+    <div class="bundle-container">
+        <div class="bundle-heading">
+            <h3>Build your Bundle :</h3>
+            <p>Pick 3 to get 1 free</p>
+        </div>
+    
+        <div class="bundle-tracker-container">
+            <div class="bundle-tracker-headings">
+                <p class="tracker-heading1">Buy 2</p>
+                <p class="tracker-heading2">Buy 3</p>
+                <p class="tracker-heading3">Buy 4</p>
+            </div>
+            <div class="bundle-tracker">
+                <div class="bundle-tracker-path">
+                    <div id="level-1" class="bundle-tracker-level">path 1</div>
+                    <div id="level-2" class="bundle-tracker-level">path 2</div>
+                    <div id="level-3" class="bundle-tracker-level">path 3</div>
+    
+                </div>
+                <div id="buy-1" class="bundle-tracker-points">Buy 1</div>
+                <div id="buy-2" class="bundle-tracker-points">Save 10%</div>
+                <div id="buy-3" class="bundle-tracker-points">Free shipping $99+</div>
+                <div id="buy-4" class="bundle-tracker-points">GET FREE</div>
+            </div>
+        </div>
+    
+        <div class="bundle-products">
+            <div id="bundle-product-1" class="bundle-product bundle-product-1">
+                 <button id="bundle-close-btn-1" class="bundle-product-close-btn">
+                    {% render 'icon-close-small' %}
+                </button> 
+            </div>
+            <div id="bundle-product-2"  class="bundle-product bundle-product-2">
+                <button id="bundle-close-btn-2" class="bundle-product-close-btn">
+                    {% render 'icon-close-small' %}
+                </button> 
+            </div>
+            <div id="bundle-product-3" class="bundle-product bundle-product-3">
+                 <button id="bundle-close-btn-3" class="bundle-product-close-btn">
+                    {% render 'icon-close-small' %}
+                </button> 
+            </div>
+            <div id="bundle-product-4" class="bundle-product bundle-product-4">
+                 <button id="bundle-close-btn-4" class="bundle-product-close-btn">
+                    {% render 'icon-close-small' %}
+                </button> 
+            </div>
+        </div>
+    
+        <div class="bundle-price">
+            <h6>Your price:</h6>
+            <p id="bundle-total" class="normal">$0.00</p>
+            <p id="bundle-saved" class="striked">$0.00</p>
+            <h4 id="bundle-discount">Save 40% Off</h4>
+        </div>
+    
+        <button id="bundle-cart-btn" class="bundle-cart-btn">Add to Cart</button>
+    
+        <div class="bundle-baseline">
+  <p>{% render 'icon-tick' %} 100% satisfaction guaranteed</p>
+</div>
+
+    </div>
+    </div>
+    
+    
+
+    <script src="{{ 'main.js' | asset_url }}"></script>
+    
+    
+    {%  schema  %} 
+    {
+        "name": "bundle",
+        "settings": [],
+        "presets": [{
+            "name": "bundle"
+        }]
+    }
+     {% endschema %}
