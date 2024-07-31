@@ -208,7 +208,7 @@ popupCloseBtn.addEventListener("click", () => {
 
 
 
-
+document.addEventListener('DOMContentLoaded', function() {
     const shopNowButton = document.getElementById('shop-now-btn');
     const bundleBg = document.getElementById('bundle-bg');
 
@@ -231,7 +231,7 @@ popupCloseBtn.addEventListener("click", () => {
         console.error('shopNowButton or bundleBg not found in the DOM');
     }
   
-
+});
 
 
 
