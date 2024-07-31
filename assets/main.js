@@ -191,7 +191,7 @@ function initializeCarousel() {
 
 
 
-sizeBtn.addEventListener("click", () => {
+sizePopupBtn.addEventListener("click", () => {
     console.log("size btn was clicked");
     sizePop.style.display = "block";
 });
