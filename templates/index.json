@@ -926,6 +926,23 @@
         "background_color": "#ffffff",
         "collection_id": "all-products"
       }
+    },
+    "benefits_ybF6CM": {
+      "type": "benefits",
+      "blocks": {
+        "benefit_wHjTAW": {
+          "type": "benefit",
+          "settings": {
+            "benefit_image": "shopify:\/\/shop_images\/pikaso_texttoimage_Detailed-anime-depiction-of-the-Naruto-character-l_1_4.png",
+            "benefit_text": "elfjowef;owekf;wkfmlwenckd"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_wHjTAW"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -949,6 +966,7 @@
     "236a13ae-25cb-427e-84d8-92ac8cb301b7",
     "product_slider_j8NqBN",
     "collection_slider_mcKqUX",
-    "all_products_Mw6tjM"
+    "all_products_Mw6tjM",
+    "benefits_ybF6CM"
   ]
 }
