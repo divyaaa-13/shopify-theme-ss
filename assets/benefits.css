@@ -1,0 +1,121 @@
+.benefits-div{
+    height: 100vh;
+    width: 100vw;
+    padding: 20px 195px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    color: #000000;
+}
+.benefits-title{
+    font-size: 5rem;
+    font-weight: bolder;
+    margin: 0;
+}
+.benefits-subhead{
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+.benefits-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 120px;
+    padding: 30px 0px;
+    margin-top: 100px;
+}
+.benefits-box{
+    height: fit-content;
+    width: 243px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin-top: -80px;
+}
+.benefits-box img{
+    height: 149px;
+    width: 243px;
+    background-color: gray;
+    border-radius: 1.6rem;
+}
+.benefits-box p{
+    font-size: 2rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0px 15px;
+    font-weight: bold;
+}
+
+
+@media(min-width : 319px) and (max-width : 480px){
+.benefits-div{
+    padding: 20px 10px;
+}
+.benefits-title{
+    font-size: 3rem;
+}
+.benefits-subhead{
+    display: none;
+}
+.benefits-container{
+    gap: 10px;
+    margin: 0;
+}
+.benefits-box{
+    width: 140px;
+    margin-top: 0;
+}
+.benefits-box img{
+    height: 90px;
+    width: 140px;
+}
+.benefits-box p{
+    font-size: 1.2rem;
+}
+}
+
+@media(min-width : 401px) and (max-width : 700px){
+.benefits-div{
+    padding: 20px 10px;
+}
+.benefits-title{
+    font-size: 3rem;
+}
+.benefits-subhead{
+    display: none;
+}
+.benefits-container{
+    gap: 10px;
+    margin: 0;
+}
+.benefits-box{
+    width: 140px;
+    margin-top: 0;
+}
+.benefits-box img{
+    height: 90px;
+    width: 140px;
+}
+.benefits-box p{
+    font-size: 1.2rem;
+}
+}
+
+@media(min-width : 700px) and (max-width : 1200px){
+.benefits-div{
+    padding: 20px 100px;
+}
+.benefits-container{
+    gap: 50px;
+    margin-top: 0;
+}
+.benefits-box{
+    margin: 0;
+}
+}
