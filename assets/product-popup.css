@@ -111,7 +111,7 @@
         align-items: center;
         gap: 5px;
         font-size: 22px;
-        margin-top: -5px;
+        /* margin-top: -5px; */
     }
     .rating-star {
         font-size: 13px;
