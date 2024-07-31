@@ -117,16 +117,11 @@
     flex: 1;
     border: 2px solid #909090;
 }
-/* #level-1{
-    background-color: #FFA500;
-    border: none;
-    box-sizing: border-box;
-} */
 
 .bundle-products{
     height: 200px;
     width: 100%;
-    margin-top: 45px;
+    /* margin-top: 45px; */
     display: flex;
     justify-content: center;
     align-items: center;
