@@ -74,6 +74,58 @@
 
 {% comment %} PRODUCT-popup... {% endcomment %}
 
+<div class="product-popup-bg">
+  <div class="product-popup">
+    <div class="product-close-btn">{% render 'icon-close-small' %}</div>
+    <div class="product-carousel">
+            <button class="product-img-left"><</button>
+            <button class="product-img-right">></button>
+        </div>
+    <div class="product-details">
+      <div class="popup-ratings">
+        <i class="fa-solid fa-star rating-star"></i>
+        <i class="fa-solid fa-star rating-star"></i>
+        <i class="fa-solid fa-star rating-star"></i>
+        <i class="fa-solid fa-star rating-star"></i>
+        <i class="fa-solid fa-star rating-star"></i>
+        <p class="rating-text">4.8(121)</p>
+      </div>
+      <h2 id="popup-product-name" class="popup-product-name">Product Name</h2>
+      <p id="popup-product-subhead" class="popup-product-subhead">Anime Mesh Shorts</p>
+      <div id="popup-product-price" class="popup-product-price">
+        <p class="normal">$35 USD</p>
+        <p class="striked">$40 USD</p>
+      </div>
+      <div class="choose-size">
+        <p>Choose sizes:</p>
+        <h4 id="size-btn">Size Chart</h4>
+      </div>
+      <div class="size-popup">
+        <div class="size-chart-close-btn">{% render 'icon-close-small' %}</div>
+        {% render 'size-chart' %}
+      </div>
+      <div class="size-options">
+        <div class="size">XS</div>
+        <div class="size">S</div>
+        <div class="size">M</div>
+        <div class="size">L</div>
+        <div class="size">XL</div>
+        <div class="size">2XL</div>
+        <div class="size">3XL</div>
+      </div>
+      <button id="shop-now-btn" class="shop-now">SHOP NOW</button>
+    </div>
+    <div class="review-images">
+         
+
+    </div>
+  </div>
+</div>
+
+{% comment %} BUNDLE.... {% endcomment %}
+
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const productList = document.querySelector(".products-list");
