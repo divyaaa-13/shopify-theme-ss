@@ -181,10 +181,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        z-index: 26;
-        right: 34px;
-        top: -20px;
+        position: fixed;
+        z-index: 130;
+        /* right: 34px;
+        top: -20px; */
+        top: 0;
+        left: 0;
+        right: 0;
     }
     .size-options {
         margin-top: -10px;
