@@ -28,6 +28,7 @@
         box-shadow: -0.10px -0.1px 30px #afafaf;
         border-radius: 20px;
         position: fixed;
+        z-index: 110;
         top: 50px;
         left: 0;
         right: 0;
