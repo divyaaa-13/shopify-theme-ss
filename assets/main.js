@@ -3,7 +3,7 @@ let sizeCloseBtn = document.querySelector(".size-chart-close-btn");
 let sizePopup = document.querySelector(".size-popup");
 let productPopupBG = document.querySelector(".product-popup-bg");
 let popupCloseBtn = document.querySelector(".product-close-btn");
-let bundleBg = document.querySelector(".bundle-bg");
+let bundleBg = document.querySelector("#bundle-bg");
 console.log(bundleBg);
 
 
