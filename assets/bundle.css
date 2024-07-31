@@ -242,7 +242,6 @@
     .bundle-bg {
         height: 100vh;
         width: 100vw;
-        padding: 10x;
     }
     .bundle-container {
         height: auto;
@@ -252,6 +251,7 @@
         padding: 10px 20px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        margin: 0;
     }
     .bundle-heading{
         gap: 12px;
