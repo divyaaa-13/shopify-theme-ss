@@ -387,10 +387,11 @@
         height: auto;
         width: 95vw;
         margin: 20px;
-        margin-left: 10px;
+        /* margin-left: 10px; */
         padding: 10px 20px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        left: 20%;
     }
     .bundle-heading h3 {
         font-size: 20px;
