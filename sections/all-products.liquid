@@ -210,19 +210,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // MAIN JAVASCRIPT...
 
-let size = document.querySelector("#size-btn");
+let sizeBtn = document.querySelector("#size-btn");
 let sizeCloseBtn = document.querySelector(".size-chart-close-btn");
 let sizePopup = document.querySelector(".size-popup");
 let productPopupBG = document.querySelector(".product-popup-bg");
 let popupCloseBtn = document.querySelector(".product-close-btn");
-let bundleBg = document.querySelector("#bundle-bg");
-let popupShopNow = document.querySelector("#shop-now-btn");
-console.log(popupShopNow);
-console.log(productPopupBG);
-console.log(size);
-
-
-
 
 
 let productData = {
@@ -411,7 +403,7 @@ function initializeCarousel() {
 
 
 
-size.addEventListener("click", () => {
+sizeBtn.addEventListener("click", () => {
     sizePopup.style.display = "block";
 });
 
@@ -428,16 +420,16 @@ popupCloseBtn.addEventListener("click", () => {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-    // const popupShopNow = document.getElementById('shop-now-btn');
-    // const bundleBg = document.getElementById('bundle-bg');
+document.addEventListener('DOMContentLoaded', function() {
+    const shopNowButton = document.getElementById('shop-now-btn');
+    const bundleBg = document.getElementById('bundle-bg');
 
-    console.log('shopNowButton:', popupShopNow);
+    console.log('shopNowButton:', shopNowButton);
     console.log('bundleBg:', bundleBg);
     console.log(bundleProducts);
 
-    if (popupShopNow && bundleBg) {
-        popupShopNow.addEventListener('click', function() {
+    if (shopNowButton && bundleBg) {
+        shopNowButton.addEventListener('click', function() {
             console.log("button was clicked");
 
             if (!productData.selectedSize && productData.sizes.length > 0) {
@@ -451,19 +443,19 @@ popupCloseBtn.addEventListener("click", () => {
         console.error('shopNowButton or bundleBg not found in the DOM');
     }
   
-// });
+});
 
 
 
 
 // Define the bundleBg and bundleContainer
-// document.addEventListener('DOMContentLoaded', function() {
-//     const bundleBackground = document.querySelector("#bundle-bg");
-//     const bundleContainer = document.querySelector(".bundle-container");
+document.addEventListener('DOMContentLoaded', () => {
+    const bundleBg = document.querySelector(".bundle-bg");
+    const bundleContainer = document.querySelector(".bundle-container");
     
     // Check if bundleBg and bundleContainer exist
     if (bundleBg) {
-        bundleBackground.addEventListener("click", () => {
+        bundleBg.addEventListener("click", () => {
             // Hide bundleBg when clicking outside of bundleContainer
             if (!bundleContainer.contains(event.target)) {
                 bundleBg.style.display = "none";
@@ -482,9 +474,9 @@ popupCloseBtn.addEventListener("click", () => {
         console.error('bundleContainer not found in the DOM');
     }
 
-    // const popupShopNow = document.getElementById('shop-now-btn');
-    if (popupShopNow) {
-        popupShopNow.addEventListener('click', function() {
+    const shopNowButton = document.getElementById('shop-now-btn');
+    if (shopNowButton) {
+        shopNowButton.addEventListener('click', function() {
             console.log("button was clicked");
             if (bundleBg) {
                 bundleBg.style.display = 'flex'; 
@@ -494,8 +486,7 @@ popupCloseBtn.addEventListener("click", () => {
     } else {
         console.error('shopNowButton not found in the DOM');
     }
-// });
-
+});
 
 
 
@@ -825,9 +816,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Button with ID "bundle-cart-btn" not found');
     }
 });
-
-
-
 
 
 </script>
