@@ -1,0 +1,666 @@
+.bundle-bg{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items:flex-end;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    z-index: 6;
+}
+.bundle-container{
+    height: 630px;
+    width: 1369px;
+    color: #000000;
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 30px 200px;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    box-shadow: -1px -0.1px 30px #afafaf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bundle-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.bundle-heading h3{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    margin: 0;
+}
+.bundle-heading p{
+    font-size: 3.3rem;
+    margin: 0;
+    color: #000000;
+}
+
+/* BUNDLE TRACKER... */
+.bundle-tracker-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bundle-tracker-headings{
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      align-items: center;
+}
+.bundle-tracker-headings p{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.tracker-heading1{
+    margin-left: 310px;
+}
+.tracker-heading2{
+    margin-left: 220px;
+}
+.tracker-heading3{
+    margin-left: 210px;
+}
+
+
+.bundle-tracker{
+    position: relative;
+}
+.bundle-tracker-path{
+    height: 29px;
+    width: 804px;
+    display: flex;
+    align-items: center;
+    
+}
+.bundle-tracker-points{
+    height: 42px;
+    width: fit-content;
+    padding: 8px 15px;
+    position: absolute;
+    top: -8px;
+    background-color: #d9d9d9;
+    color: #7c7c7c;
+    border-radius: 2rem;
+    font-size: 2.3rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#buy-1{
+    left: -40px;
+}
+#buy-2{
+    left: 190px;
+}
+#buy-3{
+    left: 410px;
+}
+#buy-4{
+    width: max-content;
+    left: 720px;
+}
+.bundle-tracker-level{
+    flex: 1;
+    border: 2px solid #909090;
+}
+/* #level-1{
+    background-color: #FFA500;
+    border: none;
+    box-sizing: border-box;
+} */
+
+.bundle-products{
+    height: 200px;
+    width: 100%;
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.bundle-product{
+    height: 193px;
+    width: 198px;
+    border-radius: 5px;
+    display: block !important;
+    background-image: url(gray.png);
+    /* background-image: url('{{ 'gray.png' | asset_url }}'); */
+    background-size: cover;
+    position: relative;
+    
+    
+}
+.bundle-product-close-btn{
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: #e40000;
+    color: #ffffff;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 8;
+    display: none;
+    text-align: center;
+
+} 
+.bundle-product-4{
+    background-image: url(yellow.png);
+    /* background-image: url('{{ 'yellow.png' |  asset_url }}'); */
+    background-size: cover;
+}
+
+.bundle-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.bundle-price h6{
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bolder;
+    color: #000000;
+}
+.bundle-price .normal{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #000000;
+}
+.bundle-price .striked{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #7c7c7c;
+}
+.bundle-price h4{
+    padding: 3px 5px;
+    color: #000000;
+    font-weight: bolder;
+    background-color: #FFA500;
+}
+
+.bundle-cart-btn{
+    width: 500px;
+    height: 60px;
+    padding: 2rem 0rem;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 4rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.bundle-baseline{
+    display: flex;
+    align-items: center;
+    gap: 10px;margin-top: -10px;
+}
+.bundle-baseline p{
+    
+    font-weight: bolder;
+}
+.bundle-baseline p svg{
+    height: 12px;
+    width: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+/* MEDIA QUERRIES... */
+
+/* @media(min-width : 319px) and (max-width : 480px){
+    .bundle-bg{
+        background-color: red;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .bundle-container{
+        height: 800px;
+        width: 600px;
+        
+    }
+    .bundle-heading h3{
+        font-size: 1rem;
+    }
+    .bundle-heading p{
+        font-size: 1rem;
+    }
+    .bundle-tracker-headings p{
+        font-size: 1rem;
+    }
+
+    .bundle-tracker-path{
+        height: 20px;
+        width: 300px;
+       
+        
+    }
+    .tracker-heading1{
+        margin-left: 30px;
+    }
+    .tracker-heading2{
+        margin-left: 30px;
+    }
+    .tracker-heading3{
+        margin-left: 30px;
+    }
+
+    .bundle-products{
+        height: 100px;
+        width: 100%;
+        margin-top: 20px;
+       
+        gap: 5px;
+    }
+
+    .bundle-tracker-points{
+        height: 20px;
+    }
+
+} */
+
+
+@media (min-width: 319px) and (max-width: 480px) {
+    .bundle-bg {
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+    }
+    .bundle-container {
+        height: auto;
+        width: 95vw;
+        margin: 20px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+    .bundle-heading h3 {
+        font-size: 1.2rem;
+        font-weight: bolder;
+        margin: 0;
+    }
+    .bundle-heading p {
+        font-size: 1.2rem;
+        margin: 0;
+        color: #000000;
+    }
+
+    .bundle-tracker-container {
+        width: 250px;
+    }
+    .bundle-tracker-headings {
+        width: 250px;
+
+    }
+    .bundle-tracker-headings p {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+    .tracker-heading1{
+        padding-left: 60px;
+    }
+    .tracker-heading2{
+       padding-left: 55px;
+    }
+    .tracker-heading3{
+        padding-left: 48px;
+    }
+
+    .bundle-tracker-path {
+        height: 10px;
+        font-size: 0.3rem;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .bundle-tracker-points {
+        height: 20px;
+        width: fit-content;
+        padding: 5px 5px;
+        border-radius: 2rem;
+        font-size: 0.7rem;
+    }
+    #buy-1 {
+        left: -5px;
+    }
+    #buy-2 {
+        left: 20%;
+    }
+    #buy-3 {
+        left: 46%;
+    }
+    #buy-4 {
+        left: 85%;
+    }
+    .bundle-tracker-level {
+        flex: 1;
+    }
+
+    .bundle-products {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+        gap: 15px;
+    }
+    .bundle-product {
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+    }
+    .bundle-product-close-btn {
+        height: 5px;
+        width: 5px;
+        right: 5px;
+        top: 5px;
+    }
+    .bundle-price h6 {
+        font-size: 1rem;
+    }
+    .bundle-price .normal {
+        font-size: 1rem;
+    }
+    .bundle-price .striked {
+        font-size: 1rem
+    }
+    .bundle-price h4 {
+        font-size: 1rem;
+        padding: 0px 0px;
+    }
+
+    .bundle-cart-btn {
+        width: 100%;
+        height: 40px;
+        padding: 1rem 0rem;
+        border-radius: 4rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+    .bundle-baseline {
+        font-size: 1.3rem;
+        gap: 10px;
+        margin-top: -10px;
+    }
+    .bundle-baseline p svg {
+        height: 10px;
+        width: 10px;
+
+    }
+}
+
+@media(min-width : 481px) and (max-width : 700px){
+    .bundle-bg {
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+    }
+    .bundle-container {
+        height: auto;
+        width: 95vw;
+        margin: 20px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+    .bundle-heading h3 {
+        font-size: 2rem;
+        font-weight: bolder;
+        margin: 0;
+    }
+    .bundle-heading p {
+        font-size: 2rem;
+        margin: 0;
+        color: #000000;
+    }
+
+    .bundle-tracker-container {
+        width: 350px;
+    }
+    .bundle-tracker-headings {
+        width: 350px;
+
+    }
+    .bundle-tracker-headings p {
+        font-size: 1rem;
+        margin: 5px 0;
+        padding-bottom: 10px;
+    }
+    .tracker-heading1{
+        padding-left: 85px;
+    }
+    .tracker-heading2{
+       padding-left: 85px;
+    }
+    .tracker-heading3{
+        padding-left: 95px;
+    }
+
+    .bundle-tracker-path {
+        height: 10px;
+        font-size: 0.3rem;
+        width: 350px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .bundle-tracker-points {
+        height: 27px;
+        width: fit-content;
+        padding: 5px 6px;
+        border-radius: 2rem;
+        font-size: 1rem;
+    }
+    #buy-1 {
+        left: -5px;
+    }
+    #buy-2 {
+        left: 20%;
+    }
+    #buy-3 {
+        left: 46%;
+    }
+    #buy-4 {
+        left: 85%;
+    }
+    .bundle-tracker-level {
+        flex: 1;
+    }
+
+    .bundle-products {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+        gap: 15px;
+    }
+    .bundle-product {
+        height: 80px;
+        width: 80px;
+        border-radius: 5px;
+    }
+    .bundle-product-close-btn {
+        height: 5px;
+        width: 5px;
+        right: 5px;
+        top: 5px;
+    }
+    .bundle-price h6 {
+        font-size: 1rem;
+    }
+    .bundle-price .normal {
+        font-size: 1rem;
+    }
+    .bundle-price .striked {
+        font-size: 1rem
+    }
+    .bundle-price h4 {
+        font-size: 1rem;
+        padding: 0px 0px;
+    }
+
+    .bundle-cart-btn {
+        width: 300px;
+        height: 50px;
+        padding: 1rem 0rem;
+        border-radius: 4rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+    .bundle-baseline {
+        font-size: 1.3rem;
+        gap: 10px;
+        margin-top: -10px;
+    }
+    .bundle-baseline p svg {
+        height: 10px;
+        width: 10px;
+
+    }
+
+}
+
+@media(min-width : 701px) and (max-width : 1200px){
+    .bundle-bg {
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+    }
+    .bundle-container {
+        height: auto;
+        width: 95vw;
+        margin: 20px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+    .bundle-heading h3 {
+        font-size: 2rem;
+        font-weight: bolder;
+        margin: 0;
+    }
+    .bundle-heading p {
+        font-size: 2rem;
+        margin: 0;
+        color: #000000;
+    }
+
+    .bundle-tracker-container {
+        width: 500px;
+    }
+    .bundle-tracker-headings {
+        width: 500px;
+
+    }
+    .bundle-tracker-headings p {
+        font-size: 1.5rem;
+        margin: 5px ;
+        padding-bottom: 10px;
+    }
+    .tracker-heading1{
+        padding-left: 120px;
+    }
+    .tracker-heading2{
+       padding-left: 110px;
+    }
+    .tracker-heading3{
+        padding-left: 110px;
+    }
+
+    .bundle-tracker-path {
+        height: 20px;
+        font-size: 0.3rem;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .bundle-tracker-points {
+        height: 30px;
+        width: fit-content;
+        padding: 5px 10px;
+        border-radius: 2rem;
+        font-size: 1.5rem;
+    }
+    #buy-1 {
+        left: -5px;
+    }
+    #buy-2 {
+        left: 20%;
+    }
+    #buy-3 {
+        left: 46%;
+    }
+    #buy-4 {
+        left: 85%;
+    }
+    .bundle-tracker-level {
+        flex: 1;
+        height: 20px;
+    }
+
+    .bundle-products {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+        gap: 15px;
+    }
+    .bundle-product {
+        height: 150px;
+        width: 150px;
+        border-radius: 5px;
+    }
+    .bundle-product-close-btn {
+        height: 20px;
+        width: 20px;
+        right: 10px;
+        top: 10px;
+    }
+    .bundle-price h6 {
+        font-size: 1.5rem;
+    }
+    .bundle-price .normal {
+        font-size: 1.5rem;
+    }
+    .bundle-price .striked {
+        font-size: 1.5rem
+    }
+    .bundle-price h4 {
+        font-size: 1.5rem;
+        padding: 0px 0px;
+    }
+
+    .bundle-cart-btn {
+        width: 300px;
+        height: 50px;
+        padding: 1rem 0rem;
+        border-radius: 4rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+    .bundle-baseline {
+        font-size: 1.3rem;
+        gap: 10px;
+        margin-top: -10px;
+    }
+    .bundle-baseline p svg {
+        height: 10px;
+        width: 10px;
+
+    }
+
+}
+
