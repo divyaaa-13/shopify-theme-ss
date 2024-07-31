@@ -50,6 +50,7 @@
         "content_iYaMMU",
         "buttons_LmDgA7"
       ],
+      "disabled": true,
       "settings": {
         "url": "",
         "show_entire_image": false,
@@ -188,6 +189,7 @@
         "5aeed9d3-2c45-461e-8682-c3a1abd2e693",
         "slide_RPR8Qi"
       ],
+      "disabled": true,
       "settings": {
         "spacing_top": 5,
         "spacing_bottom": 5,
@@ -298,6 +300,7 @@
         "f93fa5db-341b-483f-8b3e-7e11aa348655",
         "template--16989717987561__10a54fdf-bf44-49a4-a11d-e2e03d33e630-card-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Shop By Categories",
         "content": "",
@@ -316,6 +319,7 @@
     },
     "liquid_wD6BHz": {
       "type": "liquid",
+      "disabled": true,
       "settings": {
         "liquid": "<style>\n  .container {\n    border: 0;\n    border-color: #ebebeb;\n    background-color: #ebebeb;\n    display: flex; \/* Use flexbox for alignment *\/\n    align-items: center; \/* Vertically center items *\/\n    justify-content: center; \/* Horizontally center items *\/\n    text-align: center;\n    font-family: 'Poppins', sans-serif;\n    padding: 5px; \/* Add padding for spacing *\/\n  }\n  \n  .text {\n    font-size: 12px; \/* Default font size *\/\n    margin: 0; \/* Reset margin to ensure consistent spacing *\/\n  }\n<\/style>\n\n<div class=\"container\">\n  \n  <p class=\"text\">SHOP BY IN-STOCK SIZES<\/p>\n \n<\/div>",
         "spacing_top": 20,
@@ -520,6 +524,7 @@
         "template--16898571862249__ace209fb-cdf2-4ab5-9428-22493c116422-content-1",
         "template--16898571862249__ace209fb-cdf2-4ab5-9428-22493c116422-buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "url": "",
         "show_entire_image": false,
@@ -537,6 +542,7 @@
     },
     "8b06ca08-5321-42fe-aab4-cf637bd23bfb": {
       "type": "product-grid",
+      "disabled": true,
       "settings": {
         "collection": "restock",
         "products_count": 20,
@@ -558,6 +564,7 @@
     },
     "product_slider_7WmzRP": {
       "type": "product-slider",
+      "disabled": true,
       "settings": {
         "collection": "tank-tops",
         "products_count": 7,
@@ -577,6 +584,7 @@
     },
     "product_slider_JR4NGr": {
       "type": "product-slider",
+      "disabled": true,
       "settings": {
         "collection": "chapter-14",
         "products_count": 7,
@@ -894,6 +902,7 @@
         "collection_AGT9Cx",
         "card_VKB9Rx"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Shop Sale",
         "content": "<p>Enjoy savings before we run out of stock<\/p>",
