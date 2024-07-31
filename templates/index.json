@@ -907,6 +907,16 @@
         "background_color": "#FFFFFF",
         "collection_id": "all-products"
       }
+    },
+    "product_popup_xjHxxc": {
+      "type": "product-popup",
+      "settings": {
+      }
+    },
+    "bundle_ffmYJA": {
+      "type": "bundle",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -930,6 +940,8 @@
     "236a13ae-25cb-427e-84d8-92ac8cb301b7",
     "product_slider_j8NqBN",
     "collection_slider_mcKqUX",
-    "all_products_Mw6tjM"
+    "all_products_Mw6tjM",
+    "product_popup_xjHxxc",
+    "bundle_ffmYJA"
   ]
 }
