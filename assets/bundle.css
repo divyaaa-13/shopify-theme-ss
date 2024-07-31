@@ -162,6 +162,11 @@
     /* background-image: url('{{ 'yellow.png' |  asset_url }}'); */
     background-size: cover;
 }
+.bundle-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .bundle-price{
     display: flex;
