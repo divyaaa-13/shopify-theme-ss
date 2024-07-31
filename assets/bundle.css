@@ -209,11 +209,11 @@
     gap: 10px;
     /* margin-top: -10px; */
 }
-.bundle-baseline p{
+.bundle-base-line p{
     font-size: 14px;
     font-weight: bolder;
 }
-.bundle-baseline p svg{
+.bundle-base-line p svg{
     height: 12px;
     width: 12px;
     background-color: #000000;
