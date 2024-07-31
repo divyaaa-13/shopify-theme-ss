@@ -1,8 +1,8 @@
-// let sizeBtn = document.querySelector("#size-btn");
-// let sizeCloseBtn = document.querySelector(".size-chart-close-btn");
-// let sizePopup = document.querySelector(".size-popup");
+let sizeBtn = document.querySelector("#size-btn");
+let sizeCloseBtn = document.querySelector(".size-chart-close-btn");
+let sizePopup = document.querySelector(".size-popup");
 let productPopupBG = document.querySelector(".product-popup-bg");
-// let popupCloseBtn = document.querySelector(".product-close-btn");
+let popupCloseBtn = document.querySelector(".product-close-btn");
 
 
 let productData = {
