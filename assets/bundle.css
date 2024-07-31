@@ -4,7 +4,7 @@
     padding: 0;
     position: fixed;
     display: none;
-    /* justify-content: center; */
+    justify-content: center;
     align-items:flex-end;
     background-color: rgba(255, 255, 255, 0.7);
     top: 0;
