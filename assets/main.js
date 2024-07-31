@@ -192,11 +192,11 @@ function initializeCarousel() {
 
 
 size.addEventListener("click", () => {
-    sizePop.style.display = "block";
+    sizePopup.style.display = "block";
 });
 
 sizeCloseBtn.addEventListener("click", () => {
-    sizePop.style.display = "none";
+    sizePopup.style.display = "none";
 });
 
 popupCloseBtn.addEventListener("click", () => {
