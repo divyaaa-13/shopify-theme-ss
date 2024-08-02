@@ -27,9 +27,9 @@
     align-items: center;
     z-index: 210;
     position: fixed;
-    top: 80%;
+    /* top: 80%; */
     left: 5.5%;
-
+    bottom: -20%;
     right: 0;
 }
 .bundle-heading{
