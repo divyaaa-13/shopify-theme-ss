@@ -240,6 +240,7 @@ let bundleProducts = [];
 
 
 function showPopup(productElement) {
+    let bundleContainer = document.querySelector(".")
     console.log(productElement);
     const sizes = productElement.getAttribute('data-sizes') ? productElement.getAttribute('data-sizes').split(',') : [];
     const variants = productElement.getAttribute('data-variants') ? productElement.getAttribute('data-variants').split(',') : [];
