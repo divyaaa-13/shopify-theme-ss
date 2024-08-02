@@ -531,6 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateBackgroundColors(bundleProducts.length);
             updateCloseButtons(); // Update close buttons visibility
             updateBundleTotal(); // Update total
+            updateBundleNames();
         } else {
             alert("You already have 4 items in your bundle");
         }
@@ -680,6 +681,7 @@ function updateBundleProductsUI() {
     updateCloseButtons();
     updateBundleTotal();
     updateBackgroundColors(bundleProducts.length);
+    updateBundleNames();
 }
 
 
