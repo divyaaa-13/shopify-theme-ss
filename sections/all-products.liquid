@@ -890,27 +890,6 @@ function updateBundleSizes() {
 }
 
 
-// Function to hide the product popup when clicking outside of it
-function hideProductPopupOnClickOutside() {
-    const productPopup = document.querySelector('.product-popup');
-    const productPopupBg = document.querySelector('.product-popup-bg');
-
-    if (!productPopup || !productPopupBg) {
-        console.error('Product popup elements not found');
-        return;
-    }
-
-    document.addEventListener('click', function(event) {
-        if (!productPopup.contains(event.target) && !event.target.closest('.product-popup')) {
-            productPopupBg.style.display = 'none';
-        }
-    });
-}
-
-// Call the function after the DOM is loaded
-document.addEventListener("DOMContentLoaded", function() {
-    hideProductPopupOnClickOutside();
-});
 
 
 
