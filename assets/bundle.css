@@ -27,7 +27,7 @@
     align-items: center;
     z-index: 210;
     position: fixed;
-    top: 0;
+    top: 90%;
     left: 0;
     right: 0;
 }
