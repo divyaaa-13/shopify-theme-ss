@@ -137,6 +137,22 @@
     align-items: center;
     gap: 0px;
 }
+.b-product-name{
+    font-size: 8px;
+    margin: 0;
+    padding: 0;
+    display: none;
+    font-weight: bold;
+}
+.b-product-size{
+    font-size: 8px;
+    background-color: #000000;
+    color: #ffffff;
+    display: none;
+    padding: 0px 3px;
+    text-align: center;
+}
+
 .bundle-product{
     height: 193px;
     width: 198px;
@@ -244,21 +260,6 @@
 }
 
 
-.b-product-name{
-    font-size: 8px;
-    margin: 0;
-    padding: 0;
-    display: none;
-    font-weight: bold;
-}
-.b-product-size{
-    font-size: 8px;
-    background-color: #000000;
-    color: #ffffff;
-    display: none;
-    padding: 0px 3px;
-    text-align: center;
-}
 
 
 
