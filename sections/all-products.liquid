@@ -483,7 +483,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Hide bundleBg when clicking outside of bundleContainer
             if (!bundleContainer.contains(event.target)) {
                 bundleBg.style.display = "none";
-                bundleContainer.style.bottom = "-75%";
+                // bundleContainer.style.bottom = "-75%";
+                if (window.innerWidth >= 319 && window.innerWidth <= 480) {
+            bundleContainer.style.bottom = "-30%";
+        } else {
+            bundleContainer.style.bottom = "-75%"; // Or any default value you prefer
+        }
             }
         });
     } else {
