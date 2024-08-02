@@ -254,13 +254,14 @@
     background-color: #000000;
     color: #ffffff;
     display: none;
+    padding: 0;
 }
 .b-product-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
 }
 
 
