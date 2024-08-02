@@ -239,6 +239,10 @@ let bundleProducts = [];
 let bundleBg = document.querySelector(".bundle-bg");
 let bundleContainer = document.querySelector(".bundle-container");
 
+bundleContainer.addEventListener("click", ()=>{
+    bundleBg.style.display = "flex";
+})
+
 
 function showPopup(productElement) {
     let bundleContainer = document.querySelector(".bundle-container");
