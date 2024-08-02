@@ -889,22 +889,7 @@ function updateBundleSizes() {
     });
 }
 
-// Function to hide the product popup when clicking outside of it
-function hideProductPopupOnClickOutside() {
-    document.addEventListener('click', function(event) {
-        const productPopup = document.querySelector('.product-popup');
-        const productPopupBg = document.querySelector('.product-popup-bg');
-        
-        if (!productPopup.contains(event.target)) {
-            productPopupBg.style.display = 'none';
-        }
-    });
-}
 
-// Call the function after the DOM is loaded
-document.addEventListener("DOMContentLoaded", function() {
-    hideProductPopupOnClickOutside();
-});
 
 
 
