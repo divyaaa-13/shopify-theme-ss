@@ -135,7 +135,7 @@
     height: fit-content;
     width: fit-content;
     align-items: center;
-    gap: 2px;
+    gap: 0px;
 }
 .bundle-product{
     height: 193px;
