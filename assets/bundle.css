@@ -129,6 +129,12 @@
     align-items: center;
     gap: 30px;
 }
+.b-product{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+}
 .bundle-product{
     height: 193px;
     width: 198px;
