@@ -243,17 +243,11 @@
     border-radius: 50%;
 }
 
-.bundle-product-info{
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
+
 .b-product-name{
     font-size: 8px;
     margin: 0;
+    padding: 0;
     display: none;
     font-weight: bold;
 }
@@ -265,14 +259,7 @@
     padding: 0px 3px;
     text-align: center;
 }
-.b-product-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-    
-}
+
 
 
 
