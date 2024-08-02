@@ -827,6 +827,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function updateBundleNames() {
+    const nameElements = [
+        document.getElementById('b-name1'),
+        document.getElementById('b-name2'),
+        document.getElementById('b-name3'),
+        document.getElementById('b-name4')
+    ];
+
+    nameElements.forEach((element, index) => {
+        if (element) {
+            if (index < bundleProducts.length) {
+                element.textContent = bundleProducts[index].productName;
+            } else {
+                element.textContent = ''; // Clear the text if no product at this index
+            }
+        }
+    });
+}
+
 
 </script>
 
