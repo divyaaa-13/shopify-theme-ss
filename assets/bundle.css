@@ -28,7 +28,8 @@
     z-index: 210;
     position: fixed;
     top: 80%;
-    left: 0;
+    left: 10%;
+    
     right: 0;
 }
 .bundle-heading{
