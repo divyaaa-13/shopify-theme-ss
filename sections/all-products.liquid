@@ -470,37 +470,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the product popup and background elements
-    const productPopup = document.querySelector('.product-popup');
-    const productPopupBg = document.querySelector('.product-popup-bg');
-
-    // Check if elements are found
-    if (!productPopup || !productPopupBg) {
-        console.error('Product popup or background element not found');
-        return;
-    }
-
-    // Debugging log
-    console.log('Product popup and background elements found');
-
-    // Function to handle clicks outside the popup
-    function handleClickOutside(event) {
-        // Debugging log for the click target
-        console.log('Click target:', event.target);
-
-        // Check if the click was outside the product popup
-        if (!productPopup.contains(event.target) && !event.target.closest('.product-popup')) {
-            productPopupBg.style.display = 'none';
-            console.log('Hiding product popup background');
-        }
-    }
-
-    // Add a click event listener to the document
-    document.addEventListener('click', handleClickOutside);
-});
-
-
 
 
 // Define the bundleBg and bundleContainer
