@@ -245,12 +245,14 @@
 .b-product-name{
     font-size: 8px;
     margin: 0;
+    display: none;
 }
 .b-product-size{
     font-size: 8px;
     background-color: #000000;
     color: #ffffff;
     padding: 5px;
+    display: none;
 }
 .b-product-info{
     display: flex;
