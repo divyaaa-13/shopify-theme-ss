@@ -440,7 +440,21 @@ popupCloseBtn.addEventListener("click", () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const productPopupBG = document.querySelector(".product-popup-bg");
+    const productPopup = document.querySelector(".product-popup");
 
+    if (productPopupBG) {
+        productPopupBG.addEventListener("click", (event) => {
+            // Hide product-popup-bg if clicked outside of product-popup
+            if (!productPopup.contains(event.target)) {
+                productPopupBG.style.display = "none";
+            }
+        });
+    } else {
+        console.error('productPopupBG not found in the DOM');
+    }
+});
 
 
 
