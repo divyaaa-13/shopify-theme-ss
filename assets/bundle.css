@@ -236,6 +236,7 @@
 }
 
 .bundle-product-info{
+    width: 100%;
     padding: 10px;
     display: flex;
     justify-content: flex-start;
@@ -246,6 +247,7 @@
     font-size: 8px;
     margin: 0;
     display: none;
+    font-weight: bold;
 }
 .b-product-size{
     font-size: 8px;
