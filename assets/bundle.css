@@ -26,6 +26,10 @@
     justify-content: space-between;
     align-items: center;
     z-index: 210;
+    position: fixed;
+    top: 80%;
+    left: 0;
+    right: 0;
 }
 .bundle-heading{
     display: flex;
