@@ -513,7 +513,8 @@ document.addEventListener('DOMContentLoaded', () => {
             mainImage: document.querySelector('.product-carousel img').src,
             price: parseFloat(document.querySelector('.popup-product-price .normal').textContent.replace('$', '').replace(',', '')) * 100,
             selectedVariantId: productData.selectedVariantId,
-            productName: productData.title
+            productName: productData.title,
+            productSize: productData.selectedSize
         };
 
         console.log(productData);
