@@ -483,6 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Hide bundleBg when clicking outside of bundleContainer
             if (!bundleContainer.contains(event.target)) {
                 bundleBg.style.display = "none";
+                bundleContainer.style.top = "85%";
             }
         });
     } else {
