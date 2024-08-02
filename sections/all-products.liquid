@@ -848,6 +848,25 @@ function updateBundleNames() {
     });
 }
 
+function updateBundleSizes() {
+    const sizeElements = [
+        document.getElementById('b-size1'),
+        document.getElementById('b-size2'),
+        document.getElementById('b-size3'),
+        document.getElementById('b-size4')
+    ];
+
+    sizeElements.forEach((element, index) => {
+        if (element) {
+            if (index < bundleProducts.length) {
+                element.textContent = bundleProducts[index].productSize;
+            } else {
+                element.textContent = ''; // Clear the text if no product at this index
+            }
+        }
+    });
+}
+
 
 </script>
 
