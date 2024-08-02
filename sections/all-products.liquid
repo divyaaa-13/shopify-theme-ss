@@ -471,6 +471,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the product popup and background elements
+    const productPopup = document.querySelector('.product-popup');
+    const productPopupBg = document.querySelector('.product-popup-bg');
+
+    if (!productPopup || !productPopupBg) {
+        console.error('Product popup elements not found');
+        return;
+    }
+
+    // Add a click event listener to the document
+    document.addEventListener('click', function(event) {
+        // Check if the click was outside the product popup
+        if (!productPopup.contains(event.target) && !event.target.closest('.product-popup')) {
+            productPopupBg.style.display = 'none';
+        }
+    });
+});
+
+
+
 
 // Define the bundleBg and bundleContainer
 document.addEventListener('DOMContentLoaded', () => {
@@ -890,24 +911,6 @@ function updateBundleSizes() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the product popup and background elements
-    const productPopup = document.querySelector('.product-popup');
-    const productPopupBg = document.querySelector('.product-popup-bg');
-
-    if (!productPopup || !productPopupBg) {
-        console.error('Product popup elements not found');
-        return;
-    }
-
-    // Add a click event listener to the document
-    document.addEventListener('click', function(event) {
-        // Check if the click was outside the product popup
-        if (!productPopup.contains(event.target) && !event.target.closest('.product-popup')) {
-            productPopupBg.style.display = 'none';
-        }
-    });
-});
 
 
 
