@@ -50,6 +50,7 @@
         "content_iYaMMU",
         "buttons_LmDgA7"
       ],
+      "disabled": true,
       "settings": {
         "url": "",
         "show_entire_image": false,
@@ -67,6 +68,7 @@
     },
     "liquid_eBAHgU": {
       "type": "liquid",
+      "disabled": true,
       "settings": {
         "liquid": "<style>\n  .product-logos {\n    display: flex;\n    justify-content: center;\n    gap: 4px; \/* Adjust the gap as needed *\/\n    margin-top: 20px;\n  }\n\n  .product-logo {\n    max-width: 113px; \/* Adjust the size as needed *\/\n    height: auto;\n  }\n<\/style>\n\n{% assign logos = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0574\/5816\/3893\/files\/Quick-Dry_with_Mesh_Ventilation_e69be873-d38b-4179-aad0-887912fd9fb6.png?v=1718159562,https:\/\/cdn.shopify.com\/s\/files\/1\/0574\/5816\/3893\/files\/6_9de65d6d-ec60-4dcf-a323-694029d131b5.png?v=1717968832, https:\/\/cdn.shopify.com\/s\/files\/1\/0574\/5816\/3893\/files\/7_06aef245-2fa9-487a-9a2a-d4c8a3d2e409.png?v=1717968832\" | split: ',' %}\n\n<div class=\"product-logos\">\n  {% for logo in logos %}\n    <img src=\"{{ logo }}\" alt=\"Product Logo\" class=\"product-logo\">\n  {% endfor %}\n<\/div>",
         "spacing_top": 0,
@@ -225,18 +227,21 @@
       "blocks": {
         "template--16989717987561__10a54fdf-bf44-49a4-a11d-e2e03d33e630-collection-1": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "anime-mesh-shorts-1"
           }
         },
         "collection_3J8bhU": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "muay-thai-shorts"
           }
         },
         "collection_zdHJB6": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "retro-mesh-shorts"
           }
@@ -321,6 +326,7 @@
         "f93fa5db-341b-483f-8b3e-7e11aa348655",
         "template--16989717987561__10a54fdf-bf44-49a4-a11d-e2e03d33e630-card-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Shop By Categories",
         "content": "",
@@ -544,6 +550,7 @@
         "template--16898571862249__ace209fb-cdf2-4ab5-9428-22493c116422-content-1",
         "template--16898571862249__ace209fb-cdf2-4ab5-9428-22493c116422-buttons-1"
       ],
+      "disabled": true,
       "settings": {
         "url": "",
         "show_entire_image": false,
@@ -816,6 +823,7 @@
         "template--16854860923113__236a13ae-25cb-427e-84d8-92ac8cb301b7-icon-2",
         "template--16854860923113__236a13ae-25cb-427e-84d8-92ac8cb301b7-icon-3"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "content": "",
@@ -942,7 +950,7 @@
       "type": "all-products",
       "settings": {
         "theme_img": "shopify:\/\/shop_images\/one-piece-laptop_96d6ad6e-25e4-4fca-ac6f-5fa35f55b313.png",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "collection_id": "all-products"
       }
     }
