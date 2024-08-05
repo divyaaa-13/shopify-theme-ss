@@ -323,6 +323,8 @@ function showPopup(productElement) {
             });
             sizeOptions.appendChild(sizeDiv);
         });
+        productData.selectedSize = productData.sizes[0];
+        selectSize(productData.selectedSize);
     } else {
         let noSizesDiv = document.createElement('div');
         noSizesDiv.className = 'size';
