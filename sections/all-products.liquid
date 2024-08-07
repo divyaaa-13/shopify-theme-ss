@@ -526,13 +526,6 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', () => {
     const bundleBg = document.querySelector(".bundle-bg");
     const bundleContainer = document.querySelector(".bundle-container");
-    const bundleCloseBtn =document.querySelector(".bundle-close-btn");
-
-    bundleCloseBtn.addEventListener("click", ()=>{
-        console.log("bundle close btn was clicked");
-        bundleBg.style.display = "none";
-        
-    })
     
     // Check if bundleBg and bundleContainer exist
     if (bundleBg) {
