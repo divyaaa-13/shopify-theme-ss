@@ -189,7 +189,7 @@
    background-color: #FFA500;
    background-image: none;
     background-size: cover;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
