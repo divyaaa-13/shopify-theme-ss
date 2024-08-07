@@ -185,8 +185,8 @@
 
 } 
 .bundle-product-4{
-    background-image: url(yellow.png);
-    /* background-image: url('{{ 'yellow.png' |  asset_url }}'); */
+    /* background-image: url(yellow.png); */
+   background-color: #FFA500;
     background-size: cover;
 }
 .bundle-info-container{
