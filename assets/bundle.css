@@ -187,6 +187,7 @@
 .bundle-product-4{
     /* background-image: url(yellow.png); */
    background-color: #FFA500;
+   background-image: none;
     background-size: cover;
 }
 .bundle-info-container{
