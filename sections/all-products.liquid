@@ -264,11 +264,13 @@ function updatePicksLeft() {
     const line1Element = document.querySelector('.line1');
     const line2Element = document.querySelector('.line2');
     const line3Element = document.querySelector('.line3');
+    const line4Element = document.querySelector('.line4');
 
     if (bundleProducts.length === 3) {
-        if (line1Element) line1Element.style.display = 'none';
-        if (line2Element) line2Element.textContent = 'ADD';
-        if (line3Element) line3Element.textContent = 'FREE SHORTS';
+        if (line1Element) line2Element.style.display = 'none';
+        if (line2Element) line1Element.textContent = 'ADD';
+        if (line2Element) line3Element.textContent = 'FREE';
+        if (line3Element) line4Element.textContent = 'SHORTS';
     } 
 }
 
