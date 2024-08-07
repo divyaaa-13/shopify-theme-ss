@@ -204,6 +204,7 @@
     font-size: 24px;
     font-weight: bold;
     background-color: #ffffff;
+    padding: 0;
 }
 .bundle-info-container{
     display: flex;
