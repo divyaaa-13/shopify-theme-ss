@@ -200,7 +200,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
 }
 .free-product-text{
     font-size: 24px;
