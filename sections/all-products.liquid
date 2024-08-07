@@ -528,24 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bundleContainer = document.querySelector(".bundle-container");
     const bundleCloseBtn =document.querySelector(".bundle-close-btn");
 
-    if (bundleBg) {
-        bundleCloseBtn.addEventListener("click", () => {
-            // Hide bundleBg when clicking outside of bundleContainer
-            if (!bundleContainer.contains(event.target)) {
-                bundleBg.style.display = "none";
-                // bundleContainer.style.bottom = "-75%";
-                if (window.innerWidth >= 319 && window.innerWidth <= 700) {
-            bundleContainer.style.bottom = "-35%";
-        } else if (window.innerWidth >= 701 && window.innerWidth <= 1200){
-            bundleContainer.style.bottom = "-45%";
-        }else {
-            bundleContainer.style.bottom = "-75%"; // Or any default value you prefer
-        }
-            }
-        });
-    } else {
-        console.error('bundleBg not found in the DOM');
-    }
+    
     
     // Check if bundleBg and bundleContainer exist
     if (bundleBg) {
