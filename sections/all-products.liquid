@@ -251,7 +251,15 @@ function updatePicksLeft() {
     const picksLeftElement = document.getElementById("picks-left");
     const picksLeft = 3 - bundleProducts.length;
     picksLeftElement.textContent = picksLeft.toString();
+
+    const freeProductTextElement = document.querySelector('.free-product-text');
+    if (bundleProducts.length === 4) {
+        freeProductTextElement.style.display = 'none';
+    } else {
+        freeProductTextElement.style.display = 'block';
+    }
 }
+
 
 
 function showPopup(productElement) {
