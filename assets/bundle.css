@@ -189,6 +189,10 @@
    background-color: #FFA500;
    background-image: none;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .bundle-info-container{
     display: flex;
