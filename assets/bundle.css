@@ -195,6 +195,7 @@
     align-items: center;
     padding: 0;
     text-align: center;
+    gap: 3px;
 }
 .product4-div{
     display: flex;
