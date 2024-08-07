@@ -247,6 +247,12 @@ bundleContainer.addEventListener("click", ()=>{
     bundleContainer.style.bottom = "0%";
 })
 
+function updatePicksLeft() {
+    const picksLeftElement = document.getElementById("picks-left");
+    const picksLeft = 3 - bundleProducts.length;
+    picksLeftElement.textContent = picksLeft.toString();
+}
+
 
 function showPopup(productElement) {
     let bundleContainer = document.querySelector(".bundle-container");
