@@ -531,14 +531,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const bundleCloseBtn = document.querySelector("#bundle-close-btn");
 
     if (bundleCloseBtn) {
-    bundleCloseBtn.addEventListener("click", () => {
-        console.log('Close button clicked');
-        bundleBg.style.display = "none";
-        bundleContainer.style.display = "none";
-    });
-} else {
-    console.error('Bundle close button not found');
-}
+        bundleCloseBtn.addEventListener("click", () => {
+            console.log('Close button clicked');
+            if (bundleBg) {
+                bundleBg.style.display = "none";
+            } else {
+                console.error('Bundle background not found');
+            }
+            if (bundleContainer) {
+                bundleContainer.style.display = "none";
+            } else {
+                console.error('Bundle container not found');
+            }
+        });
+    } else {
+        console.error('Bundle close button not found');
+    }
     
     // Check if bundleBg and bundleContainer exist
     if (bundleBg) {
