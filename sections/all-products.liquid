@@ -258,6 +258,7 @@ function resetBundleContainerPosition() {
 
 // Add event listener for the close button
 bundleCloseBtn.addEventListener("click", () => {
+    console.log("bundle close btn was clicked");
     bundleBg.style.display = "none";
     resetBundleContainerPosition();
 });
