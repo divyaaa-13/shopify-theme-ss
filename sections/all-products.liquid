@@ -260,6 +260,16 @@ function updatePicksLeft() {
             element.style.display = 'block';
         }
     });
+
+    const line1Element = document.querySelector('.line1');
+    const line2Element = document.querySelector('.line2');
+    const line3Element = document.querySelector('.line3');
+
+    if (bundleProducts.length === 3) {
+        if (line1Element) line1Element.style.display = 'none';
+        if (line2Element) line2Element.textContent = 'add';
+        if (line3Element) line3Element.textContent = 'free shorts';
+    } 
 }
 
 
