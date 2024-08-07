@@ -31,6 +31,21 @@
     bottom: -75%;
     right: 0;
 }
+.bundle-close-btn {
+    height: 47px;
+    width: 47px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 110;
+    top: 20px;
+    right: 30px;
+}
 .bundle-heading{
     display: flex;
     justify-content: center;
