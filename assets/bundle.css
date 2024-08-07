@@ -194,6 +194,10 @@
     justify-content: center;
     align-items: center;
 }
+.free-product-text{
+    font-size: 24px;
+    font-weight: bold;
+}
 .bundle-info-container{
     display: flex;
     justify-content: center;
