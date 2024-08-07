@@ -250,6 +250,18 @@ bundleContainer.addEventListener("click", ()=>{
     bundleContainer.style.bottom = "0%";
 })
 
+document.querySelectorAll('[id^=bundle-close-btn-]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const bundleId = btn.id.split('-').pop(); // Get the bundle ID from the button ID
+    const bundleBg = document.querySelector(`#bundle-bg-${bundleId}`);
+    if (bundleBg) {
+      bundleBg.style.display = 'none'; // Hide the background
+    }
+  });
+});
+
+
+
 function updatePicksLeft() {
     const picksLeftElement = document.getElementById("picks-left");
 
