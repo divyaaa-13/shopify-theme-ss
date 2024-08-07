@@ -243,25 +243,7 @@ let bundleProducts = [];
 let bundleBg = document.querySelector(".bundle-bg");
 let bundleContainer = document.querySelector(".bundle-container");
 
-let bundleCloseBtn = document.getElementById("bundle-close-btn");
 
-// Function to reset the bundle container position
-function resetBundleContainerPosition() {
-    if (window.innerWidth >= 319 && window.innerWidth <= 700) {
-        bundleContainer.style.bottom = "-35%";
-    } else if (window.innerWidth >= 701 && window.innerWidth <= 1200) {
-        bundleContainer.style.bottom = "-45%";
-    } else {
-        bundleContainer.style.bottom = "-75%"; // Or any default value you prefer
-    }
-}
-
-// Add event listener for the close button
-bundleCloseBtn.addEventListener("click", () => {
-    console.log("bundle close btn was clicked");
-    bundleBg.style.display = "none";
-    resetBundleContainerPosition();
-});
 
 bundleContainer.addEventListener("click", ()=>{
     bundleBg.style.display = "flex";
