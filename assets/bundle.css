@@ -198,6 +198,11 @@
     font-size: 24px;
     font-weight: bold;
 }
+.free-product-bg-white{
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ffffff;
+}
 .bundle-info-container{
     display: flex;
     justify-content: center;
