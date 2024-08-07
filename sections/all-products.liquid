@@ -266,9 +266,9 @@ function updatePicksLeft() {
         }
     });
 
-    
-
-    if (bundleProducts.length === 3) {
+    if (bundleProducts.length === 0){
+        if (line2Element) line3Element.textContent = 'PRODUCTS';
+    }else if (bundleProducts.length === 3) {
         if (line1Element) line2Element.style.display = 'none';
         if (line2Element) line1Element.textContent = 'ADD';
         if (line2Element) line3Element.textContent = 'FREE';
