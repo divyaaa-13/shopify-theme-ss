@@ -252,6 +252,7 @@ bundleContainer.addEventListener("click", (event) => {
     if (event.target !== bundleCloseBtn && !bundleCloseBtn.contains(event.target)) {
         bundleBg.style.display = "flex";
         bundleContainer.style.bottom = "0%";
+        bundleCloseBtn.style.display = "flex";
         console.log('After click bundleBg display:', getComputedStyle(bundleBg).display);
         console.log('After click bundleContainer bottom:', getComputedStyle(bundleContainer).bottom);
     }
@@ -261,6 +262,7 @@ bundleCloseBtn.addEventListener("click", (event) => {
     console.log("bundleCloseBtn clicked");
     event.stopPropagation(); // Stop the event from bubbling up to bundleContainer
     bundleBg.style.display = "none";
+    bundleCloseBtn.style.display = "none";
     if (window.innerWidth >= 319 && window.innerWidth <= 700) {
             bundleContainer.style.bottom = "-35%";
         } else if (window.innerWidth >= 701 && window.innerWidth <= 1200){
@@ -529,6 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (shopNowButton && bundleBg) {
         shopNowButton.addEventListener('click', function() {
             console.log("button was clicked");
+            bundleCloseBtn.style.display = "flex";
 
             if (!productData.selectedSize && productData.sizes.length > 0) {
                 // Automatically select the first size
