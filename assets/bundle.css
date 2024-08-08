@@ -492,10 +492,10 @@
         bottom: -30%;
     }
     .bundle-close-btn {
-        height: 20px;
-        width: 20px;
-        top: 5px;
-        right: 5px;
+        height: 25px;
+        width: 25px;
+        top: 10px;
+        right: 10px;
     }
     .bundle-product-4{
         gap: 0px;
