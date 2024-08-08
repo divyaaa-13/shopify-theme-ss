@@ -564,6 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Hide bundleBg when clicking outside of bundleContainer
             if (!bundleContainer.contains(event.target)) {
                 bundleBg.style.display = "none";
+                bundleCloseBtn.style.display = "none";
                 // bundleContainer.style.bottom = "-75%";
                 if (window.innerWidth >= 319 && window.innerWidth <= 700) {
             bundleContainer.style.bottom = "-35%";
