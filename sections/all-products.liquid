@@ -251,6 +251,11 @@ bundleContainer.addEventListener("click", ()=>{
     bundleContainer.style.bottom = "0%";
 })
 
+bundleCloseBtn.addEventListener("click", () => {
+    bundleBg.style.display = "none";
+    bundleContainer.style.bottom = "-75%";
+});
+
 
 
 function updatePicksLeft() {
