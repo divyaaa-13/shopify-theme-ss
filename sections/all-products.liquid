@@ -240,15 +240,15 @@ let productData = {
 
 let bundleProducts = [];
 
-let bundleBg = document.querySelector(".bundle-bg");
-let bundleContainer = document.querySelector(".bundle-container");
+// let bundleBg = document.querySelector(".bundle-bg");
+// let bundleContainer = document.querySelector(".bundle-container");
 
 
 
-bundleContainer.addEventListener("click", ()=>{
-    bundleBg.style.display = "flex";
-    bundleContainer.style.bottom = "0%";
-})
+// bundleContainer.addEventListener("click", ()=>{
+//     bundleBg.style.display = "flex";
+//     bundleContainer.style.bottom = "0%";
+// })
 
 
 
@@ -262,7 +262,7 @@ function updatePicksLeft() {
     const picksLeft = 3 - bundleProducts.length;
     picksLeftElement.textContent = picksLeft.toString();
 
-    const freeProductTextElements = document.querySelectorAll('.free-product-text')
+    const freeProductTextElements = document.querySelectorAll('.free-product-text');
     freeProductTextElements.forEach(element => {
         if (bundleProducts.length === 4) {
             element.style.display = 'none';
