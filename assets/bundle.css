@@ -340,6 +340,9 @@
     .free-product-text{
         font-size: 9px;
     }
+    .free-product-bg-white{
+        padding: 0;
+    }
     .bundle-heading{
         gap: 12px;
     }
