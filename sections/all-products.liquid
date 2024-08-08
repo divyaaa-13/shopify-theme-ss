@@ -244,16 +244,26 @@ let bundleBg = document.querySelector(".bundle-bg");
 let bundleContainer = document.querySelector(".bundle-container");
 let bundleCloseBtn = document.querySelector("#bundle-close-btn");
 
+console.log('Initial bundleBg display:', getComputedStyle(bundleBg).display);
+console.log('Initial bundleContainer bottom:', getComputedStyle(bundleContainer).bottom);
 
+bundleContainer.addEventListener("click", (event) => {
+    console.log("bundleContainer clicked");
+    if (event.target !== bundleCloseBtn && !bundleCloseBtn.contains(event.target)) {
+        bundleBg.style.display = "flex";
+        bundleContainer.style.bottom = "0%";
+        console.log('After click bundleBg display:', getComputedStyle(bundleBg).display);
+        console.log('After click bundleContainer bottom:', getComputedStyle(bundleContainer).bottom);
+    }
+});
 
-bundleContainer.addEventListener("click", ()=>{
-    bundleBg.style.display = "flex";
-    bundleContainer.style.bottom = "0%";
-})
-
-bundleCloseBtn.addEventListener("click", () => {
+bundleCloseBtn.addEventListener("click", (event) => {
+    console.log("bundleCloseBtn clicked");
+    event.stopPropagation(); // Stop the event from bubbling up to bundleContainer
     bundleBg.style.display = "none";
     bundleContainer.style.bottom = "-75%";
+    console.log('After close bundleBg display:', getComputedStyle(bundleBg).display);
+    console.log('After close bundleContainer bottom:', getComputedStyle(bundleContainer).bottom);
 });
 
 
