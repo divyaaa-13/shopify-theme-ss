@@ -328,6 +328,12 @@
         bottom: -30%;
         left: 3%;
     }
+    .product-close-btn {
+        height: 35px;
+        width: 35px;
+        top: -20px;
+        right: 20px;
+    }
     .bundle-heading{
         gap: 12px;
     }
