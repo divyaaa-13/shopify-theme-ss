@@ -435,8 +435,12 @@ function selectSize(size) {
         sizeDiv.classList.remove('selected');
     });
 
+    // const selectedSizeDiv = Array.from(document.querySelectorAll('.size')).find(div => div.textContent.trim() === size);
+    // if (selectedSizeDiv) {
+    //     selectedSizeDiv.classList.add('selected');
+    // }
     const selectedSizeDiv = Array.from(document.querySelectorAll('.size')).find(div => div.textContent.trim() === size);
-    if (selectedSizeDiv) {
+    if (selectedSizeDiv && !selectedSizeDiv.classList.contains('unavailable')) {
         selectedSizeDiv.classList.add('selected');
     }
 
