@@ -22,12 +22,14 @@
     {% assign variants = '' %}
 
     {% for variant in product.variants %}
+        {% if variant.available %}
       {% assign sizes = sizes | append: variant.title %}
       {% assign variants = variants | append: variant.id %}
       {% unless forloop.last %}
         {% assign sizes = sizes | append: ',' %}
         {% assign variants = variants | append: ',' %}
       {% endunless %}
+      {% endif %}
     {% endfor %}
 
 
