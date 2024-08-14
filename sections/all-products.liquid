@@ -378,14 +378,14 @@ function showPopup(productElement) {
     sizeOptions.innerHTML = '';
 
   
-    // Add new size options
-    if (productData.sizes.length > 0) {
+     // Add new size options
+     if (productData.sizes.length > 0) {
         productData.sizes.forEach((size, index) => {
             let sizeDiv = document.createElement('div');
             sizeDiv.className = 'size';
             sizeDiv.textContent = size;
 
-            if (productData.availabilities[index] === "false") {
+            if (!productData.availabilities[index]) {
                 sizeDiv.classList.add('unavailable');
                 sizeDiv.style.textDecoration = "line-through";
                 sizeDiv.style.pointerEvents = "none";
@@ -397,7 +397,7 @@ function showPopup(productElement) {
 
             sizeOptions.appendChild(sizeDiv);
         });
-        productData.selectedSize = productData.sizes.find((_, index) => productData.availabilities[index] === "true");
+        productData.selectedSize = productData.sizes.find((_, index) => productData.availabilities[index]);
         selectSize(productData.selectedSize);
     } else {
         let noSizesDiv = document.createElement('div');
