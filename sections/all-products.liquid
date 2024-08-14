@@ -27,7 +27,7 @@
       {% unless forloop.last %}
         {% assign sizes = sizes | append: ',' %}
         {% assign variants = variants | append: ',' %}
-        {% assign availabilities = availabilities | append: variant.available | append: ',' %}
+        {% assign availabilities = availabilities | append: ',' %}
       {% endunless %}
     {% endfor %}
 
