@@ -30,9 +30,9 @@
     {% endfor %}
 
      <!-- Remove the trailing comma -->
-     {% comment %} {% comment %} {% assign sizes = sizes | slice: 0, sizes.size | minus: 1 %}
+      {% assign sizes = sizes | slice: 0, sizes.size | minus: 1 %}
      {% assign variants = variants | slice: 0, variants.size | minus: 1 %}
-     {% assign availabilities = availabilities | slice: 0, availabilities.size | minus: 1 %} {% endcomment %} {% endcomment %}
+     {% assign availabilities = availabilities | slice: 0, availabilities.size | minus: 1 %} 
 
 
 
