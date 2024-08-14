@@ -200,6 +200,12 @@
         background-color: #000000;
         color: #ffffff;
     }
+    .size.unavailable {
+        text-decoration: line-through;
+        color: gray;
+        cursor: not-allowed;
+    }
+    
     .product-details .shop-now {
         width: 100%;
         height: 50px;
