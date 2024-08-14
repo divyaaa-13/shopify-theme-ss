@@ -372,18 +372,27 @@ function showPopup(productElement) {
     // Clear existing size options
     sizeOptions.innerHTML = '';
 
+  
     // Add new size options
     if (productData.sizes.length > 0) {
-        productData.sizes.forEach(size => {
+        productData.sizes.forEach((size, index) => {
             let sizeDiv = document.createElement('div');
             sizeDiv.className = 'size';
             sizeDiv.textContent = size;
-            sizeDiv.addEventListener('click', () => {
-                selectSize(size);
-            });
+
+            if (productData.availabilities[index] === "false") {
+                sizeDiv.classList.add('unavailable');
+                sizeDiv.style.textDecoration = "line-through";
+                sizeDiv.style.pointerEvents = "none";
+            } else {
+                sizeDiv.addEventListener('click', () => {
+                    selectSize(size);
+                });
+            }
+
             sizeOptions.appendChild(sizeDiv);
         });
-        productData.selectedSize = productData.sizes[0];
+        productData.selectedSize = productData.sizes.find((_, index) => productData.availabilities[index] === "true");
         selectSize(productData.selectedSize);
     } else {
         let noSizesDiv = document.createElement('div');
