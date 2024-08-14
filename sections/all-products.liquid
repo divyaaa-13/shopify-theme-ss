@@ -313,7 +313,8 @@ function showPopup(productElement) {
     console.log(productElement);
     const sizes = productElement.getAttribute('data-sizes') ? productElement.getAttribute('data-sizes').split(',') : [];
     const variants = productElement.getAttribute('data-variants') ? productElement.getAttribute('data-variants').split(',') : [];
-   
+    const yo = productElement.getAttribute('data-variants');
+   console.log(yo);
     const productReviewImages = JSON.parse(productElement.getAttribute('data-product-review-images'));
 
     console.log("these are the review images:", productReviewImages);
