@@ -40,6 +40,7 @@
     data-images="{% for image in product.images %}{{ image.src | img_url: 'original' }}{% unless forloop.last %},{% endunless %}{% endfor %}"
     data-sizes="{{ sizes }}"
     data-variants="{{ variants }}"
+    data-availabilities="{{ availabilities }}"
     data-product-review-images='{{ product.metafields.custom.review_images.value | json }}'
     onclick="showPopup(this)">
 
