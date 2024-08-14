@@ -313,7 +313,7 @@ function showPopup(productElement) {
     console.log(productElement);
     const sizes = productElement.getAttribute('data-sizes') ? productElement.getAttribute('data-sizes').split(',') : [];
     const variants = productElement.getAttribute('data-variants') ? productElement.getAttribute('data-variants').split(',') : [];
-    const availabilities = productElement.getAttribute('data-availabilities') ? productElement.getAttribute('data-availabilities').split(',').map(avail => avail === 'true') : [];
+    const availabilities = productElement.getAttribute('data-availabilities') ? productElement.getAttribute('data-availabilities').split(',').filter(Boolean).map(avail => avail === 'true') : [];
     const productReviewImages = JSON.parse(productElement.getAttribute('data-product-review-images'));
 
     console.log("these are the review images:", productReviewImages);
