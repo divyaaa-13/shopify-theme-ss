@@ -15,6 +15,7 @@
 <div class="products-list">
  
   {% for product in section.settings.collection_id.products %}
+    {% if product.available %}
     {% assign sizes = '' %}
     {% assign variants = '' %}
 
@@ -73,6 +74,7 @@
  </div>
  </div>
 </div>
+{% endif %}
 {% endfor %}
 </div>
 </div>
