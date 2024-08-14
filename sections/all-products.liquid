@@ -18,6 +18,7 @@
     {% if product.available %}
     {% assign sizes = '' %}
     {% assign variants = '' %}
+    {% assign availabilities = '' %}
 
     {% for variant in product.variants %}
       {% assign sizes = sizes | append: variant.title %}
@@ -30,9 +31,9 @@
     {% endfor %}
 
      <!-- Remove the trailing comma -->
-      {% assign sizes = sizes | slice: 0, sizes.size | minus: 1 %}
+      {% comment %} {% assign sizes = sizes | slice: 0, sizes.size | minus: 1 %}
      {% assign variants = variants | slice: 0, variants.size | minus: 1 %}
-     {% assign availabilities = availabilities | slice: 0, availabilities.size | minus: 1 %} 
+     {% assign availabilities = availabilities | slice: 0, availabilities.size | minus: 1 %}  {% endcomment %}
 
 
 
