@@ -201,7 +201,7 @@
         color: #ffffff;
     }
     .size.unavailable {
-        text-decoration: line-through;
+        /* text-decoration: line-through; */
         color: gray;
         cursor: not-allowed;
     }
