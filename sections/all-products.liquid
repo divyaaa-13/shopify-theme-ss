@@ -331,7 +331,7 @@ function showPopup(productElement) {
         images: productElement.getAttribute('data-images') ? productElement.getAttribute('data-images').split(',') : [],
         sizes: sizes,
         variants: variants,
-        availabilities: availabilities.map(avail => avail === 'true'),
+        availabilities: availabilities,
         mainImage: productElement.getAttribute('data-main-image') || '',
         selectedSize: null,
         selectedVariantId: null
