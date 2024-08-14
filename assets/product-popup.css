@@ -195,6 +195,7 @@
     .size-options div:hover {
         color: #ffffff;
         background-color: #000000;
+        cursor: pointer;
     }
     .size.selected{
         background-color: #000000;
