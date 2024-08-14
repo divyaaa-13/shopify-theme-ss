@@ -376,35 +376,36 @@ function showPopup(productElement) {
     // Clear existing size options
     sizeOptions.innerHTML = '';
 
-  
-    // Add new size options
-     // Add new size options
-     if (productData.sizes.length > 0) {
-        productData.sizes.forEach((size, index) => {
-            let sizeDiv = document.createElement('div');
-            sizeDiv.className = 'size';
-            sizeDiv.textContent = size;
+     // Clear existing size options
+     sizeOptions.innerHTML = '';
 
-            if (!productData.availabilities[index]) {
-                sizeDiv.classList.add('unavailable');
-                sizeDiv.style.textDecoration = "line-through";
-                sizeDiv.style.pointerEvents = "none";
-            } else {
-                sizeDiv.addEventListener('click', () => {
-                    selectSize(size);
-                });
-            }
+// Add new size options
+if (productData.sizes.length > 0) {
+    productData.sizes.forEach((size, index) => {
+        let sizeDiv = document.createElement('div');
+        sizeDiv.className = 'size';
+        sizeDiv.textContent = size;
 
-            sizeOptions.appendChild(sizeDiv);
-        });
-        productData.selectedSize = productData.sizes.find((_, index) => productData.availabilities[index]);
-        selectSize(productData.selectedSize);
-    } else {
-        let noSizesDiv = document.createElement('div');
-        noSizesDiv.className = 'size';
-        noSizesDiv.textContent = 'No sizes available';
-        sizeOptions.appendChild(noSizesDiv);
-    }
+        if (!productData.availabilities[index]) {
+            sizeDiv.classList.add('unavailable');
+            sizeDiv.style.textDecoration = "line-through";
+            sizeDiv.style.pointerEvents = "none";
+        } else {
+            sizeDiv.addEventListener('click', () => {
+                selectSize(size);
+            });
+        }
+
+        sizeOptions.appendChild(sizeDiv);
+    });
+    productData.selectedSize = productData.sizes.find((_, index) => productData.availabilities[index]);
+    selectSize(productData.selectedSize);
+} else {
+    let noSizesDiv = document.createElement('div');
+    noSizesDiv.className = 'size';
+    noSizesDiv.textContent = 'No sizes available';
+    sizeOptions.appendChild(noSizesDiv);
+}
 
     // Clear existing review images
     reviewImagesContainer.innerHTML = '';
