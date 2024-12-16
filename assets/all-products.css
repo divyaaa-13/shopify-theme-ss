@@ -1,0 +1,257 @@
+.collection-div {
+    padding: 0px 195px;
+    height: 658px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.theme-img {
+    height: 97px;
+    width: 527px;
+}
+
+.theme-img img {
+    height: 97px;
+    width: 527px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.products-list {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.productlist-carousel-btn {
+    height: 50px;
+    width: 50px;
+    background-color: #383838;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    z-index: 2;
+}
+
+/* .product-list-left {
+    left: 0px;
+}
+
+.product-list-right {
+    right: 0px;
+} */
+
+.product {
+    width: 282px;
+}
+
+.product img {
+    height: 295px;
+    width: 282px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.collection-product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.all-products-ratings {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    margin: 0;
+}
+
+.rating-text {
+    margin: 0;
+    font-size: 10px;
+}
+
+.rating-star {
+    font-size: 10px;
+    color: #ffa500;
+    margin: 0;
+}
+
+.collection-product-title {
+    margin: 0;
+    font-size: 21pxpx;
+    font-weight: bolder;
+}
+
+.collection-product-type {
+    font-size: 12px;
+    color: #000000;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+}
+
+.collection-product-price {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.collection-price-normal {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.collection-price-compare {
+    font-size: 20px;
+
+    color: #858585;
+    text-decoration: line-through;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+    .collection-div {
+        padding: 30px 0px 30px 20px;
+        height: auto;
+        display: block;
+    }
+    .theme-img,
+    .theme-img img {
+        height: 160px;
+        width: 280px;
+    }
+    .carousel-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .products-list {
+        width: 100%;
+        gap: 10px;
+    }
+    .product {
+        width: 150px !important;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    .product img {
+        width: 150px;
+        height: 164px;
+    }
+    .collection-product-details {
+        gap: 0px;
+    }
+    .all-products-ratings {
+        justify-content: center;
+    }
+    .rating-star {
+        font-size: 7px;
+    }
+    .collection-product-title {
+        font-size: 16px;
+    }
+    .collection-product-type {
+        font-size: 12px;
+    }
+    .collection-product-price {
+        justify-content: center;
+    }
+    .collection-price-normal,
+    .collection-price-compare {
+        font-size: 14px;
+    }
+    .productlist-carousel-btn {
+        height: 40px;
+        width: 40px;
+        font-size: 15px;
+        top: 50%;
+    }
+}
+
+@media(min-width : 481px) and (max-width : 700px){
+  .collection-div {
+        padding: 30px 0px 30px 20px;
+        height: auto;
+        display: block;
+    }
+    /* .theme-img,
+    .theme-img img {
+        height: 160px;
+        width: 280px;
+    } */
+    .carousel-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .products-list {
+        width: 100%;
+        gap: 10px;
+    }
+    .product {
+        width: 150px !important;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    .product img {
+        width: 150px;
+        height: 164px;
+    }
+    .collection-product-details {
+        gap: 0px;
+    }
+    .all-products-ratings {
+        justify-content: center;
+    }
+    .rating-star {
+        font-size: 7px;
+    }
+    .collection-product-title {
+        font-size: 15px;
+    }
+    .collection-product-type {
+        font-size: 10px;
+    }
+    .collection-product-price {
+        justify-content: center;
+    }
+    .collection-price-normal,
+    .collection-price-compare {
+        font-size: 12px;
+    }
+    .productlist-carousel-btn {
+        height: 40px;
+        width: 40px;
+        font-size: 15px;
+        top: 50%;
+    }
+}
+
+@media(min-width :701px) and (max-width : 1200px){
+  .collection-div {
+    padding: 29px 60px;
+    height: auto;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+}

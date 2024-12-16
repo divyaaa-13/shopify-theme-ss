@@ -1,10 +1,19 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "settings_schema": {
     "colors": {
       "name": "Colores",
       "settings": {
         "paragraph__1": {
-          "content": "Lea [nuestra guía](https://help.brickspacelab.com/en/articles/88-setup-color-settings) para obtener ayuda para configurar su paleta de colores."
+          "content": "Lea [nuestra guía](https:\/\/help.brickspacelab.com\/en\/articles\/88-setup-color-settings) para obtener ayuda para configurar su paleta de colores."
         },
         "header__1": {
           "content": "Tema de luz"
@@ -72,7 +81,7 @@
         },
         "mobile_bar": {
           "label": "Bar móvil",
-          "info": "Esta configuración controla la barra superior en dispositivos móviles. [Más información] (https://help.brickspacelab.com/en/articles/83-sitewide-using-a-mobile-bar-color)."
+          "info": "Esta configuración controla la barra superior en dispositivos móviles. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/83-sitewide-using-a-mobile-bar-color)."
         },
         "background_body_dark": {
           "label": "Cuerpo",
@@ -108,7 +117,7 @@
       "name": "Fronteras",
       "settings": {
         "paragraph__1": {
-          "content": "Lea [nuestra guía](https://help.brickspacelab.com/en/articles/87-setup-border-settings) para obtener ayuda para seleccionar la configuración de su borde."
+          "content": "Lea [nuestra guía](https:\/\/help.brickspacelab.com\/en\/articles\/87-setup-border-settings) para obtener ayuda para seleccionar la configuración de su borde."
         },
         "header__1": {
           "content": "Radio"
@@ -205,7 +214,7 @@
       "name": "Tipografía",
       "settings": {
         "paragraph__1": {
-          "content": "Lee [nuestra guía](https://help.brickspacelab.com/en/articles/86-setup-typography-settings) para obtener ayuda para seleccionar la configuración de tu tipografía, así como para sugerir combinaciones de fuentes."
+          "content": "Lee [nuestra guía](https:\/\/help.brickspacelab.com\/en\/articles\/86-setup-typography-settings) para obtener ayuda para seleccionar la configuración de tu tipografía, así como para sugerir combinaciones de fuentes."
         },
         "header__1": {
           "content": "Familia tipográfica"
@@ -352,7 +361,7 @@
           "info": "Se reducirá a 32 x 32px. Se recomienda 400 x 400px."
         },
         "paragraph__1": {
-          "content": "Favicon también puede mostrarse en los resultados de búsqueda y en los fragmentos enriquecidos. [Más información] (https://developers.google.com/search/docs/advanced/structured-data/logo)."
+          "content": "Favicon también puede mostrarse en los resultados de búsqueda y en los fragmentos enriquecidos. [Más información] (https:\/\/developers.google.com\/search\/docs\/advanced\/structured-data\/logo)."
         }
       }
     },
@@ -536,7 +545,7 @@
         },
         "product_card_enable_tagline": {
           "label": "Habilitar el eslogan del producto",
-          "info": "Mostrar una breve descripción de un producto. [Más información] (https://help.brickspacelab.com/en/articles/79-sitewide-adding-taglines-to-product-thumbnails)."
+          "info": "Mostrar una breve descripción de un producto. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/79-sitewide-adding-taglines-to-product-thumbnails)."
         },
         "product_card_enable_sku": {
           "label": "Mostrar SKU del producto"
@@ -1001,7 +1010,7 @@
             "label": "Cargue más con un clic"
           },
           "options__3": {
-            "label": "Botones Siguiente/Atrás"
+            "label": "Botones Siguiente\/Atrás"
           }
         }
       }
@@ -1011,11 +1020,11 @@
       "settings": {
         "enable_language": {
           "label": "Habilitar selector de idioma",
-          "info": "Para agregar un idioma, vaya a su [configuración de idioma](/admin/settings/languages)."
+          "info": "Para agregar un idioma, vaya a su [configuración de idioma](\/admin\/settings\/languages)."
         },
         "enable_region": {
           "label": "Habilitar el selector de país o región",
-          "info": "Para agregar un país o región, ve a [configuración de pago](/admin/settings/payments)."
+          "info": "Para agregar un país o región, ve a [configuración de pago](\/admin\/settings\/payments)."
         }
       }
     },
@@ -1077,51 +1086,51 @@
       "settings": {
         "social_x_twitter_link": {
           "label": "X (antes Twitter) URL",
-          "info": "https://twitter.com/shopify"
+          "info": "https:\/\/twitter.com\/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook URL",
-          "info": "https://facebook.com/shopify"
+          "info": "https:\/\/facebook.com\/shopify"
         },
         "social_pinterest_link": {
           "label": "Pinterest URL",
-          "info": "https://pinterest.com/shopify"
+          "info": "https:\/\/pinterest.com\/shopify"
         },
         "social_instagram_link": {
           "label": "Instagram URL",
-          "info": "http://instagram.com/shopify"
+          "info": "http:\/\/instagram.com\/shopify"
         },
         "social_tiktok_link": {
           "label": "TikTok URL",
-          "info": "https://tiktok.com/@shopify"
+          "info": "https:\/\/tiktok.com\/@shopify"
         },
         "social_tumblr_link": {
           "label": "Tumblr URL",
-          "info": "https://shopify.tumblr.com"
+          "info": "https:\/\/shopify.tumblr.com"
         },
         "social_snapchat_link": {
           "label": "Snapchat URL",
-          "info": "https://www.snapchat.com/add/shopify"
+          "info": "https:\/\/www.snapchat.com\/add\/shopify"
         },
         "social_youtube_link": {
           "label": "YouTube URL",
-          "info": "https://www.youtube.com/shopify"
+          "info": "https:\/\/www.youtube.com\/shopify"
         },
         "social_vimeo_link": {
           "label": "Vimeo URL",
-          "info": "https://vimeo.com/shopify"
+          "info": "https:\/\/vimeo.com\/shopify"
         },
         "social_discord_link": {
           "label": "Discord URL",
-          "info": "https://discord.com/invite/shopifydevs"
+          "info": "https:\/\/discord.com\/invite\/shopifydevs"
         },
         "social_linkedin_link": {
           "label": "LinkedIn URL",
-          "info": "https://www.linkedin.com/in/shopify"
+          "info": "https:\/\/www.linkedin.com\/in\/shopify"
         },
         "social_twitch_link": {
           "label": "Twitch URL",
-          "info": "https://www.twitch.tv/shopifydevs"
+          "info": "https:\/\/www.twitch.tv\/shopifydevs"
         }
       }
     },
@@ -1130,14 +1139,14 @@
       "settings": {
         "enable_local_business": {
           "label": "Habilite los negocios locales",
-          "info": "Muestre su sitio web en los resultados de búsqueda locales. Ideal para empresas con una tienda física. Para cambiar la dirección de tu tienda, visita [configuración general](/admin/settings/general). [Más información] (https://developers.google.com/search/docs/advanced/structured-data/local-business#examples)."
+          "info": "Muestre su sitio web en los resultados de búsqueda locales. Ideal para empresas con una tienda física. Para cambiar la dirección de tu tienda, visita [configuración general](\/admin\/settings\/general). [Más información] (https:\/\/developers.google.com\/search\/docs\/advanced\/structured-data\/local-business#examples)."
         },
         "paragraph__1": {
-          "content": "Para actualizar la dirección de tu empresa local, ve a [configuración general](/admin/settings/general)."
+          "content": "Para actualizar la dirección de tu empresa local, ve a [configuración general](\/admin\/settings\/general)."
         },
         "maps_api_key": {
           "label": "Clave de API de Google Maps",
-          "info": "Tendrás que registrar una clave de API de Google Maps para mostrar cualquier mapa. [Más información] (https://help.brickspacelab.com/en/articles/148-creating-a-google-maps-api-key)."
+          "info": "Tendrás que registrar una clave de API de Google Maps para mostrar cualquier mapa. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/148-creating-a-google-maps-api-key)."
         }
       }
     }
@@ -1946,7 +1955,7 @@
     "collection_main": {
       "name": "Cuadrícula de recogida",
       "paragraph__1": {
-        "content": "Los bloques se pueden usar para mostrar contenido promocional adicional dentro de una cuadrícula de colección. [Más información] (https://help.brickspacelab.com/en/articles/181-core-templates-collection)."
+        "content": "Los bloques se pueden usar para mostrar contenido promocional adicional dentro de una cuadrícula de colección. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/181-core-templates-collection)."
       },
       "settings": {
         "row_size_desktop": {
@@ -2291,7 +2300,7 @@
       "settings": {
         "countdown_date": {
           "label": "Cuenta regresiva fecha-hora",
-          "info": "Introduzca una fecha con el siguiente formato: dd/mm/aaaa."
+          "info": "Introduzca una fecha con el siguiente formato: dd\/mm\/aaaa."
         }
       }
     },
@@ -2595,7 +2604,7 @@
         },
         "enable_multiple_variant_images": {
           "label": "Mostrar solo los medios asociados a la variante seleccionada",
-          "info": "Los medios de otras variantes estarán ocultos. Se requiere una configuración adicional. [Más información] (https://help.brickspacelab.com/en/articles/182-core-templates-product)."
+          "info": "Los medios de otras variantes estarán ocultos. Se requiere una configuración adicional. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/182-core-templates-product)."
         },
         "media_color_scheme": {
           "label": "Fondo",
@@ -2649,7 +2658,7 @@
           "name": "Productos agrupados",
           "settings": {
             "paragraph__1": {
-              "content": "Utilice metacampos para asignar productos a este paquete. [Más información] (https://help.brickspacelab.com/en/articles/63-extra-templates-product-bundle)"
+              "content": "Utilice metacampos para asignar productos a este paquete. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/63-extra-templates-product-bundle)"
             }
           }
         },
@@ -2657,7 +2666,7 @@
           "name": "Productos vinculados",
           "settings": {
             "paragraph__1": {
-              "content": "Vincule varios productos y muéstrelos como opciones. [Más información] (https://help.brickspacelab.com/en/articles/182-core-templates-product)"
+              "content": "Vincule varios productos y muéstrelos como opciones. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/182-core-templates-product)"
             },
             "linked_products": {
               "label": "Productos"
@@ -2671,7 +2680,7 @@
           "name": "Campo personalizado",
           "settings": {
             "paragraph__1": {
-              "content": "Recopile más información del producto con campos personalizados. Por ejemplo, incluya un campo de grabado personalizado para que los clientes puedan personalizar su compra. [Más información] (https://help.brickspacelab.com/en/articles/182-core-templates-product)."
+              "content": "Recopile más información del producto con campos personalizados. Por ejemplo, incluya un campo de grabado personalizado para que los clientes puedan personalizar su compra. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/182-core-templates-product)."
             },
             "required_field": {
               "label": "Habilitar campo obligatorio"
@@ -2730,7 +2739,7 @@
           "name": "Cajón de contenido",
           "settings": {
             "paragraph__1": {
-              "content": "Muestra un enlace que abre un cajón deslizable. Utilícelo para mostrar cómodamente los detalles del producto, como las tablas de tallas. [Más información] (https://help.brickspacelab.com/en/articles/182-core-templates-product)."
+              "content": "Muestra un enlace que abre un cajón deslizable. Utilícelo para mostrar cómodamente los detalles del producto, como las tablas de tallas. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/182-core-templates-product)."
             },
             "option": {
               "label": "Opción",
@@ -2767,11 +2776,11 @@
             },
             "enable_dynamic_checkout": {
               "label": "Habilitar el pago dinámico",
-              "info": "Usando los métodos de pago disponibles en su tienda, los clientes ven su opción preferida, como PayPal o Apple Pay. [Más información] (https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)."
+              "info": "Usando los métodos de pago disponibles en su tienda, los clientes ven su opción preferida, como PayPal o Apple Pay. [Más información] (https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)."
             },
             "enable_gift_card_recipient": {
               "label": "Mostrar el formulario de información del destinatario para los productos de tarjetas de regalo",
-              "info": "Opcionalmente, los productos de tarjetas de regalo se pueden enviar directamente a un destinatario junto con un mensaje personal. [Más información] (https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+              "info": "Opcionalmente, los productos de tarjetas de regalo se pueden enviar directamente a un destinatario junto con un mensaje personal. [Más información] (https:\/\/help.shopify.com\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
             },
             "content": {
               "label": "Texto adicional"
@@ -2907,7 +2916,7 @@
         },
         "intent": {
           "label": "Intento",
-          "info": "Nota: Los resultados complementarios deben configurarse mediante la [app] de búsqueda y descubrimiento (/admin/apps/search-and-discovery/product-recommendations). Los productos relacionados se generan automáticamente.",
+          "info": "Nota: Los resultados complementarios deben configurarse mediante la [app] de búsqueda y descubrimiento (\/admin\/apps\/search-and-discovery\/product-recommendations). Los productos relacionados se generan automáticamente.",
           "options__1": {
             "label": "Relacionado"
           },
@@ -2978,7 +2987,7 @@
           "name": "Tienda",
           "settings": {
             "paragraph__1": {
-              "content": "Si el mapa está habilitado, debe definir una chincheta personalizada para esta dirección. [Aprende a obtener coordenadas] (https://support.google.com/maps/answer/18539?hl=en)."
+              "content": "Si el mapa está habilitado, debe definir una chincheta personalizada para esta dirección. [Aprende a obtener coordenadas] (https:\/\/support.google.com\/maps\/answer\/18539?hl=en)."
             },
             "store_name": {
               "label": "Nombre de la tienda"
@@ -3211,7 +3220,7 @@
           "name": "Contenido",
           "settings": {
             "paragraph__1": {
-              "content": "Los bloques se pueden usar para incluir contenido promocional adicional dentro del cajón del carrito en el escritorio. [Más información] (https://help.brickspacelab.com/en/articles/115-core-sections-cart-drawer)."
+              "content": "Los bloques se pueden usar para incluir contenido promocional adicional dentro del cajón del carrito en el escritorio. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/115-core-sections-cart-drawer)."
             },
             "paragraph__2": {
               "content": "Nota: Los bloques del carrito solo son visibles en el escritorio."
@@ -3396,7 +3405,7 @@
           "name": "Contenido",
           "settings": {
             "paragraph__1": {
-              "content": "Los bloques se pueden usar para mostrar contenido destacado dentro de la navegación desplegable del escritorio. [Más información] (https://help.brickspacelab.com/en/articles/117-core-sections-header)."
+              "content": "Los bloques se pueden usar para mostrar contenido destacado dentro de la navegación desplegable del escritorio. [Más información] (https:\/\/help.brickspacelab.com\/en\/articles\/117-core-sections-header)."
             },
             "menu": {
               "label": "Menú",
@@ -3480,16 +3489,16 @@
         "aspect_ratio": {
           "label": "Relación de aspecto",
           "options__1": {
-            "label": "16/9"
+            "label": "16\/9"
           },
           "options__2": {
-            "label": "2/3"
+            "label": "2\/3"
           },
           "options__3": {
-            "label": "1/1"
+            "label": "1\/1"
           },
           "options__4": {
-            "label": "9/16"
+            "label": "9\/16"
           }
         },
         "auto_play": {
