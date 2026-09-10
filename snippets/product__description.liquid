@@ -29,11 +29,20 @@
   {% capture button_label %}
     {{ 'products.accordions.description' | t }}
   {% endcapture %}
-  {% render 'component__accordion', 
-    open: blocksettings.enable_open,
-    container_class: container_class,
-    inner_class: 'mb-4',
-    button_label: button_label, 
-    content: product.description.
-    icon: blocksettings.icon %}
+  {% render 'component__accordion', open: blocksettings.enable_open, container_class: container_class, inner_class: 'mb-4', button_label: button_label, content: product.description, icon: blocksettings.icon %}
 {% endunless %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'component__accordion', \n    open: blocksettings.enable_open,\n
+    \   container_class: container_class,\n    inner_class: 'mb-4',\n    button_label:
+    button_label, \n    content: product.description.\n    icon: blocksettings.icon
+    %}"
+  to: "{% render 'component__accordion', open: blocksettings.enable_open, container_class:
+    container_class, inner_class: 'mb-4', button_label: button_label, content: product.description,
+    icon: blocksettings.icon %}"
+  position: 988..1195
+{% endcomment %}
